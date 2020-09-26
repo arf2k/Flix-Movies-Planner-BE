@@ -3,7 +3,7 @@ class ScenesController < ApplicationController
      def index
           scenes = Scene.all
 
-          render json: scenes, except: [:updated_at, :created_at] 
+          json_string = SceneSerializer.new(scene).serialized_json
      end
 
 end
