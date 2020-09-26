@@ -4,15 +4,15 @@ class LocationsController < ApplicationController
           locations = Location.all 
           
           
-          render json: locations, except: [:updated_at, :created_at] 
+          json_string = LocationSerializer.new(locations).serialized_json
 
      end
 
 
-     def show 
-          location = Location.find_by(params[:id])
+     # def show 
+     #      location = Location.find_by(params[:id])
 
-          render json: locations, except: [:updated_at, :created_at] 
-     end
+     #      render json: locations, except: [:updated_at, :created_at] 
+     # end
 
 end

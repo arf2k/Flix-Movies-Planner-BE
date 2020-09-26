@@ -4,7 +4,7 @@ class SettingsController < ApplicationController
           settings = Setting.all 
 
 
-          render json: settings, except: [:updated_at, :created_at] 
+          json_string = SettingSerializer.new(settings).serialized_json
      end
 
 
