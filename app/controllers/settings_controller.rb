@@ -4,7 +4,7 @@ class SettingsController < ApplicationController
           settings = Setting.all 
 
 
-          json_string = SettingSerializer.new(settings).serialized_json
+          render json: SettingSerializer.new(settings).serialized_json
      end
 
 

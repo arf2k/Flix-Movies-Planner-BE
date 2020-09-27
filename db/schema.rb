@@ -20,9 +20,9 @@ ActiveRecord::Schema.define(version: 2020_09_26_175054) do
     t.string "name"
     t.string "address"
     t.string "contact_name"
-    t.integer "contact_phone"
+    t.string "contact_phone"
     t.string "image_url"
-    t.string "category_id"
+    t.integer "category_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
