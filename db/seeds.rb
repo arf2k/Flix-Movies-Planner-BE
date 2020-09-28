@@ -59,4 +59,8 @@ concourse = Location.create!(borough: "Bronx", name: "Concourse Plaza Multiplex 
 regal = Location.create!(borough: "Staten Island", name: "Regal UA Staten Island & RPX", address: "2474 Forest Ave, Staten Island, NY 10303", contact_name: Faker::Name.unique.name, contact_phone: "8444627342", image_url: "https://lh3.googleusercontent.com/proxy/B7eHLCgEKJL9NdQID0rAr3IG_D0iAKsCnI6xN6L7Q-dwZmN4pHIKiL2h_bTlE4p2bemLcUENLfDUktT6CNXm97LkrHatiTuMzueIYaXsHkEjEbdV1S6YppM7QtRaLw9JL4H0", category_id: movie.id)
 
 
-scene1 = Scene.create!(name: "Fight", setting: park, location: central_park)
+# scene1 = Scene.create!(name: "Fist Fight")
+# scene2 = Scene.create!(name: "First Date")
+# scene3 = Scene.create!(name: "Zombie Massacre")
+# scene4 = Scene.create!(name: "Plotting the Heist")
+# scene5 = Scene.create!(name: "Bachelor Party")
