@@ -4,7 +4,7 @@ class LocationsController < ApplicationController
           locations = Location.all 
           
           
-          render json: LocationSerializer.new(locations).serialized_json
+          render json: locations 
 
      end
 

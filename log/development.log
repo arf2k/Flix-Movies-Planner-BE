@@ -4086,3 +4086,377 @@ Processing by SettingsController#index as */*
 Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 1426)
 
 
+Started GET "/settings/" for ::1 at 2020-09-28 17:20:50 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SettingsController#index as */*
+  [1m[36mSetting Load (13.8ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:7:in `index'
+Completed 200 OK in 31ms (Views: 9.1ms | ActiveRecord: 17.4ms | Allocations: 7301)
+
+
+Started GET "/settings/" for ::1 at 2020-09-28 19:42:11 -0400
+Processing by SettingsController#index as */*
+  [1m[36mSetting Load (0.4ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 1497)
+
+
+Started GET "/locations" for ::1 at 2020-09-28 19:42:32 -0400
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "settings"."id" FROM "settings" INNER JOIN "scenes" ON "settings"."id" = "scenes"."setting_id" WHERE "scenes"."location_id" = $1[0m  [["location_id", 122]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."location_id" = $1[0m  [["location_id", 122]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "settings"."id" FROM "settings" INNER JOIN "scenes" ON "settings"."id" = "scenes"."setting_id" WHERE "scenes"."location_id" = $1[0m  [["location_id", 123]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."location_id" = $1[0m  [["location_id", 123]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "settings"."id" FROM "settings" INNER JOIN "scenes" ON "settings"."id" = "scenes"."setting_id" WHERE "scenes"."location_id" = $1[0m  [["location_id", 124]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."location_id" = $1[0m  [["location_id", 124]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "settings"."id" FROM "settings" INNER JOIN "scenes" ON "settings"."id" = "scenes"."setting_id" WHERE "scenes"."location_id" = $1[0m  [["location_id", 125]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."location_id" = $1[0m  [["location_id", 125]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "settings"."id" FROM "settings" INNER JOIN "scenes" ON "settings"."id" = "scenes"."setting_id" WHERE "scenes"."location_id" = $1[0m  [["location_id", 126]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."location_id" = $1[0m  [["location_id", 126]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "settings"."id" FROM "settings" INNER JOIN "scenes" ON "settings"."id" = "scenes"."setting_id" WHERE "scenes"."location_id" = $1[0m  [["location_id", 127]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."location_id" = $1[0m  [["location_id", 127]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "settings"."id" FROM "settings" INNER JOIN "scenes" ON "settings"."id" = "scenes"."setting_id" WHERE "scenes"."location_id" = $1[0m  [["location_id", 128]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."location_id" = $1[0m  [["location_id", 128]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "settings"."id" FROM "settings" INNER JOIN "scenes" ON "settings"."id" = "scenes"."setting_id" WHERE "scenes"."location_id" = $1[0m  [["location_id", 129]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."location_id" = $1[0m  [["location_id", 129]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "settings"."id" FROM "settings" INNER JOIN "scenes" ON "settings"."id" = "scenes"."setting_id" WHERE "scenes"."location_id" = $1[0m  [["location_id", 130]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."location_id" = $1[0m  [["location_id", 130]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "settings"."id" FROM "settings" INNER JOIN "scenes" ON "settings"."id" = "scenes"."setting_id" WHERE "scenes"."location_id" = $1[0m  [["location_id", 131]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."location_id" = $1[0m  [["location_id", 131]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "settings"."id" FROM "settings" INNER JOIN "scenes" ON "settings"."id" = "scenes"."setting_id" WHERE "scenes"."location_id" = $1[0m  [["location_id", 132]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."location_id" = $1[0m  [["location_id", 132]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "settings"."id" FROM "settings" INNER JOIN "scenes" ON "settings"."id" = "scenes"."setting_id" WHERE "scenes"."location_id" = $1[0m  [["location_id", 133]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."location_id" = $1[0m  [["location_id", 133]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "settings"."id" FROM "settings" INNER JOIN "scenes" ON "settings"."id" = "scenes"."setting_id" WHERE "scenes"."location_id" = $1[0m  [["location_id", 134]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."location_id" = $1[0m  [["location_id", 134]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "settings"."id" FROM "settings" INNER JOIN "scenes" ON "settings"."id" = "scenes"."setting_id" WHERE "scenes"."location_id" = $1[0m  [["location_id", 135]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."location_id" = $1[0m  [["location_id", 135]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "settings"."id" FROM "settings" INNER JOIN "scenes" ON "settings"."id" = "scenes"."setting_id" WHERE "scenes"."location_id" = $1[0m  [["location_id", 136]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."location_id" = $1[0m  [["location_id", 136]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "settings"."id" FROM "settings" INNER JOIN "scenes" ON "settings"."id" = "scenes"."setting_id" WHERE "scenes"."location_id" = $1[0m  [["location_id", 137]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."location_id" = $1[0m  [["location_id", 137]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "settings"."id" FROM "settings" INNER JOIN "scenes" ON "settings"."id" = "scenes"."setting_id" WHERE "scenes"."location_id" = $1[0m  [["location_id", 138]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."location_id" = $1[0m  [["location_id", 138]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "settings"."id" FROM "settings" INNER JOIN "scenes" ON "settings"."id" = "scenes"."setting_id" WHERE "scenes"."location_id" = $1[0m  [["location_id", 139]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."location_id" = $1[0m  [["location_id", 139]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "settings"."id" FROM "settings" INNER JOIN "scenes" ON "settings"."id" = "scenes"."setting_id" WHERE "scenes"."location_id" = $1[0m  [["location_id", 140]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."location_id" = $1[0m  [["location_id", 140]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "settings"."id" FROM "settings" INNER JOIN "scenes" ON "settings"."id" = "scenes"."setting_id" WHERE "scenes"."location_id" = $1[0m  [["location_id", 141]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."location_id" = $1[0m  [["location_id", 141]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "settings"."id" FROM "settings" INNER JOIN "scenes" ON "settings"."id" = "scenes"."setting_id" WHERE "scenes"."location_id" = $1[0m  [["location_id", 142]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."location_id" = $1[0m  [["location_id", 142]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "settings"."id" FROM "settings" INNER JOIN "scenes" ON "settings"."id" = "scenes"."setting_id" WHERE "scenes"."location_id" = $1[0m  [["location_id", 143]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."location_id" = $1[0m  [["location_id", 143]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "settings"."id" FROM "settings" INNER JOIN "scenes" ON "settings"."id" = "scenes"."setting_id" WHERE "scenes"."location_id" = $1[0m  [["location_id", 144]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."location_id" = $1[0m  [["location_id", 144]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "settings"."id" FROM "settings" INNER JOIN "scenes" ON "settings"."id" = "scenes"."setting_id" WHERE "scenes"."location_id" = $1[0m  [["location_id", 145]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."location_id" = $1[0m  [["location_id", 145]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "settings"."id" FROM "settings" INNER JOIN "scenes" ON "settings"."id" = "scenes"."setting_id" WHERE "scenes"."location_id" = $1[0m  [["location_id", 146]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."location_id" = $1[0m  [["location_id", 146]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "settings"."id" FROM "settings" INNER JOIN "scenes" ON "settings"."id" = "scenes"."setting_id" WHERE "scenes"."location_id" = $1[0m  [["location_id", 147]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."location_id" = $1[0m  [["location_id", 147]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "settings"."id" FROM "settings" INNER JOIN "scenes" ON "settings"."id" = "scenes"."setting_id" WHERE "scenes"."location_id" = $1[0m  [["location_id", 148]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."location_id" = $1[0m  [["location_id", 148]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "settings"."id" FROM "settings" INNER JOIN "scenes" ON "settings"."id" = "scenes"."setting_id" WHERE "scenes"."location_id" = $1[0m  [["location_id", 149]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."location_id" = $1[0m  [["location_id", 149]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "settings"."id" FROM "settings" INNER JOIN "scenes" ON "settings"."id" = "scenes"."setting_id" WHERE "scenes"."location_id" = $1[0m  [["location_id", 150]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."location_id" = $1[0m  [["location_id", 150]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "settings"."id" FROM "settings" INNER JOIN "scenes" ON "settings"."id" = "scenes"."setting_id" WHERE "scenes"."location_id" = $1[0m  [["location_id", 151]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."location_id" = $1[0m  [["location_id", 151]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "settings"."id" FROM "settings" INNER JOIN "scenes" ON "settings"."id" = "scenes"."setting_id" WHERE "scenes"."location_id" = $1[0m  [["location_id", 152]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."location_id" = $1[0m  [["location_id", 152]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "settings"."id" FROM "settings" INNER JOIN "scenes" ON "settings"."id" = "scenes"."setting_id" WHERE "scenes"."location_id" = $1[0m  [["location_id", 153]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."location_id" = $1[0m  [["location_id", 153]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "settings"."id" FROM "settings" INNER JOIN "scenes" ON "settings"."id" = "scenes"."setting_id" WHERE "scenes"."location_id" = $1[0m  [["location_id", 154]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."location_id" = $1[0m  [["location_id", 154]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "settings"."id" FROM "settings" INNER JOIN "scenes" ON "settings"."id" = "scenes"."setting_id" WHERE "scenes"."location_id" = $1[0m  [["location_id", 155]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."location_id" = $1[0m  [["location_id", 155]]
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+Completed 200 OK in 104ms (Views: 0.1ms | ActiveRecord: 15.3ms | Allocations: 83675)
+
+
+Started GET "/settings/" for ::1 at 2020-09-28 19:44:50 -0400
+Processing by SettingsController#index as */*
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:7:in `index'
+Completed 200 OK in 13ms (Views: 5.7ms | ActiveRecord: 3.9ms | Allocations: 6500)
+
+
+Started GET "/settings/" for ::1 at 2020-09-28 19:44:51 -0400
+Processing by SettingsController#index as */*
+  [1m[36mSetting Load (0.5ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.5ms | Allocations: 1444)
+
+
+Started GET "/settings/" for ::1 at 2020-09-28 19:46:08 -0400
+Processing by SettingsController#index as */*
+  [1m[36mSetting Load (0.6ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.6ms | Allocations: 1426)
+
+
+Started GET "/settings/" for ::1 at 2020-09-28 19:47:06 -0400
+Processing by SettingsController#index as */*
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 1426)
+
+
+Started GET "/settings/" for ::1 at 2020-09-28 19:47:21 -0400
+Processing by SettingsController#index as */*
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1426)
+
+
+Started GET "/settings/" for ::1 at 2020-09-28 19:48:27 -0400
+Processing by SettingsController#index as */*
+  [1m[36mSetting Load (0.5ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.5ms | Allocations: 1426)
+
+
+Started GET "/settings/" for ::1 at 2020-09-28 19:48:28 -0400
+Processing by SettingsController#index as */*
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1426)
+
+
+Started GET "/settings/" for ::1 at 2020-09-28 19:48:52 -0400
+Processing by SettingsController#index as HTML
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1443)
+
+
+Started GET "/locations" for ::1 at 2020-09-28 19:48:57 -0400
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+Completed 200 OK in 29ms (Views: 24.1ms | ActiveRecord: 2.7ms | Allocations: 15206)
+
+
+Started GET "/locations" for ::1 at 2020-09-28 19:49:03 -0400
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.3ms | Allocations: 7329)
+
+
+Started GET "/settings" for ::1 at 2020-09-28 19:49:16 -0400
+Processing by SettingsController#index as HTML
+  [1m[36mSetting Load (0.4ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.4ms | Allocations: 1424)
+
+
+Started GET "/settings/" for ::1 at 2020-09-28 19:49:54 -0400
+Processing by SettingsController#index as */*
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.3ms | Allocations: 1426)
+
+
+Started GET "/settings/" for ::1 at 2020-09-28 19:49:55 -0400
+Processing by SettingsController#index as */*
+  [1m[36mSetting Load (0.4ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms | Allocations: 1426)
+
+
+Started GET "/settings/" for ::1 at 2020-09-28 19:50:21 -0400
+Processing by SettingsController#index as */*
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1426)
+
+
+Started GET "/settings/" for ::1 at 2020-09-28 19:53:20 -0400
+Processing by SettingsController#index as */*
+  [1m[36mSetting Load (0.4ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.4ms | Allocations: 1426)
+
+
+Started GET "/settings/" for ::1 at 2020-09-28 19:53:21 -0400
+Processing by SettingsController#index as */*
+  [1m[36mSetting Load (0.6ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.6ms | Allocations: 1426)
+
+
+Started GET "/" for ::1 at 2020-09-28 19:54:15 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/alexforeman/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/alexforeman/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.1ms | Allocations: 315)
+Completed 200 OK in 13ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 1588)
+
+
+Started GET "/" for ::1 at 2020-09-28 19:54:29 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/alexforeman/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/alexforeman/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.6ms | Allocations: 191)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 723)
+
+
+Started GET "/" for ::1 at 2020-09-28 19:55:05 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/alexforeman/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/alexforeman/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 8)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 235)
+
+
+Started GET "/sessions" for ::1 at 2020-09-28 19:55:07 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/sessions"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/settings" for ::1 at 2020-09-28 19:55:08 -0400
+Processing by SettingsController#index as HTML
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 1458)
+
+
+Started GET "/locations" for ::1 at 2020-09-28 19:55:14 -0400
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.4ms | Allocations: 7332)
+
+
+Started GET "/settings/" for ::1 at 2020-09-28 19:55:25 -0400
+Processing by SettingsController#index as */*
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1426)
+
+
+Started GET "/settings/" for ::1 at 2020-09-28 19:56:03 -0400
+Processing by SettingsController#index as */*
+  [1m[36mSetting Load (0.4ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms | Allocations: 1426)
+
+
+Started GET "/" for ::1 at 2020-09-28 19:56:18 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/alexforeman/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/alexforeman/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 7)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 237)
+
+
+Started GET "/locations" for ::1 at 2020-09-28 19:56:21 -0400
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.5ms | Allocations: 7329)
+
+
+Started GET "/locations/" for ::1 at 2020-09-28 19:56:59 -0400
+Started GET "/settings/" for ::1 at 2020-09-28 19:56:59 -0400
+Processing by LocationsController#index as */*
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.4ms | Allocations: 7331)
+
+
+Processing by SettingsController#index as */*
+  [1m[36mSetting Load (0.5ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.5ms | Allocations: 1484)
+
+
