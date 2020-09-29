@@ -5888,3 +5888,12 @@ SyntaxError (/Users/alexforeman/Flatiron/code/MOD3/MOD3ProjectBackend-api/config
   
 config/routes.rb:6: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
 config/routes.rb:6: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+Started GET "/locations/" for ::1 at 2020-09-29 10:45:21 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LocationsController#index as */*
+  [1m[36mLocation Load (8.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:7:in `index'
+Completed 200 OK in 36ms (Views: 16.4ms | ActiveRecord: 12.9ms | Allocations: 16565)
+
+
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations" ORDER BY "locations"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]

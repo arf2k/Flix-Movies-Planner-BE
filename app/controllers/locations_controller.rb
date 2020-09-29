@@ -3,7 +3,9 @@ class LocationsController < ApplicationController
      def index
           locations = Location.all 
           
-          
+          if params[:setting]
+               locations = Location.all.filter{|location| location.category_id == params[:seting]}
+          end
           render json: locations 
 
      end
@@ -14,12 +16,6 @@ class LocationsController < ApplicationController
      render json: location
     end
 
-    def category 
-     category = Location.find_by(params[:category_id])
-
-
-     render json: category 
-    end
 
 
 private 

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :locations, only: [:index, :show, :new, :create] do 
-    
+  resources :locations 
+
     
   
   resources :scenes
