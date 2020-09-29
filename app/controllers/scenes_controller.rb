@@ -1,9 +1,16 @@
 class ScenesController < ApplicationController
      
-     def index
-          scenes = Scene.all
+# def new
+# end
 
-          render json: SceneSerializer.new(scenes).serialized_json
-     end
+# def create
+# end
+
+# def update
+# end
+
+# def destroy
+# end
+
 
 end
