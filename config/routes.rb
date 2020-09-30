@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
+  resources :shoots
   resources :locations 
-
-    
-  
   resources :scenes
   resources :settings
 

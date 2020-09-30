@@ -9642,3 +9642,2461 @@ Processing by LocationsController#index as */*
 Completed 200 OK in 5ms (Views: 1.8ms | ActiveRecord: 0.5ms | Allocations: 2853)
 
 
+Started GET "/settings/" for ::1 at 2020-09-29 16:09:28 -0400
+Started GET "/locations?setting=undefined" for ::1 at 2020-09-29 16:09:28 -0400
+Started GET "/locations/undefined" for ::1 at 2020-09-29 16:09:28 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LocationsController#show as */*
+  [1m[35m (7.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  Parameters: {"id"=>"undefined"}
+Processing by LocationsController#index as */*
+Processing by SettingsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mSetting Load (1.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+  [1m[36mLocation Load (1.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 45ms (Views: 0.2ms | ActiveRecord: 21.0ms | Allocations: 9414)
+
+
+Completed 200 OK in 59ms (Views: 7.8ms | ActiveRecord: 44.4ms | Allocations: 15362)
+
+
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 69ms (ActiveRecord: 19.0ms | Allocations: 18736)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/locations?setting=22" for ::1 at 2020-09-29 16:09:30 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"22"}
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 2878)
+
+
+Started GET "/locations/undefined" for ::1 at 2020-09-29 16:09:32 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms | Allocations: 665)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/locations/undefined" for ::1 at 2020-09-29 16:09:40 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms | Allocations: 648)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/locations?setting=21" for ::1 at 2020-09-29 16:10:57 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"21"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 16ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 3021)
+
+
+Started GET "/locations/undefined" for ::1 at 2020-09-29 16:11:02 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms | Allocations: 650)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/locations/undefined" for ::1 at 2020-09-29 16:11:19 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms | Allocations: 648)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/locations/undefined" for ::1 at 2020-09-29 16:11:30 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.6ms | Allocations: 648)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/locations/undefined" for ::1 at 2020-09-29 16:11:33 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms | Allocations: 648)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/locations/undefined" for ::1 at 2020-09-29 16:11:34 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms | Allocations: 650)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/locations/undefined" for ::1 at 2020-09-29 16:11:54 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms | Allocations: 648)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/locations/undefined" for ::1 at 2020-09-29 16:11:56 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms | Allocations: 648)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/locations?setting=23" for ::1 at 2020-09-29 16:12:36 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"23"}
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.4ms | Allocations: 2143)
+
+
+Started GET "/locations?setting=25" for ::1 at 2020-09-29 16:12:53 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"25"}
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.4ms | Allocations: 2145)
+
+
+Started GET "/locations/undefined" for ::1 at 2020-09-29 16:13:05 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mLocation Load (0.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms | Allocations: 650)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/locations/151" for ::1 at 2020-09-29 16:13:45 -0400
+Processing by LocationsController#show as HTML
+  Parameters: {"id"=>"151"}
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 151], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 815)
+
+
+Started GET "/settings/" for ::1 at 2020-09-29 16:14:22 -0400
+Started GET "/locations?setting=undefined" for ::1 at 2020-09-29 16:14:22 -0400
+Started GET "/locations/undefined" for ::1 at 2020-09-29 16:14:22 -0400
+Processing by SettingsController#index as */*
+Processing by LocationsController#index as */*
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mSetting Load (0.9ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+  Parameters: {"setting"=>"undefined"}
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.9ms | Allocations: 1884)
+
+
+  [1m[36mLocation Load (2.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+  [1m[36mLocation Load (1.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 12ms (ActiveRecord: 4.2ms | Allocations: 3542)
+
+
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 2.7ms | Allocations: 2209)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/locations?setting=22" for ::1 at 2020-09-29 16:14:24 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"22"}
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 2852)
+
+
+Started GET "/locations/undefined" for ::1 at 2020-09-29 16:14:25 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.3ms | Allocations: 649)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/settings/" for ::1 at 2020-09-29 16:15:07 -0400
+Started GET "/locations/undefined" for ::1 at 2020-09-29 16:15:07 -0400
+Started GET "/locations?setting=undefined" for ::1 at 2020-09-29 16:15:07 -0400
+Processing by SettingsController#index as */*
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mLocation Load (14.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mSetting Load (20.7ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 19ms (ActiveRecord: 14.3ms | Allocations: 1325)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+  [1m[36mLocation Load (18.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Completed 200 OK in 28ms (Views: 7.1ms | ActiveRecord: 20.7ms | Allocations: 3222)
+
+
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 49ms (Views: 0.2ms | ActiveRecord: 18.0ms | Allocations: 29307)
+
+
+Started GET "/locations?setting=22" for ::1 at 2020-09-29 16:15:09 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"22"}
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 2853)
+
+
+Started GET "/locations/undefined" for ::1 at 2020-09-29 16:15:11 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.5ms | Allocations: 678)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/locations/undefined" for ::1 at 2020-09-29 16:15:24 -0400
+Started GET "/locations?setting=undefined" for ::1 at 2020-09-29 16:15:24 -0400
+Started GET "/settings/" for ::1 at 2020-09-29 16:15:24 -0400
+Processing by LocationsController#show as */*
+Processing by SettingsController#index as */*
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  Parameters: {"id"=>"undefined"}
+  [1m[36mSetting Load (2.4ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 2.4ms | Allocations: 1858)
+
+
+  [1m[36mLocation Load (4.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 7ms (ActiveRecord: 4.6ms | Allocations: 2319)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+  [1m[36mLocation Load (6.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 45ms (Views: 0.1ms | ActiveRecord: 6.1ms | Allocations: 29218)
+
+
+Started GET "/locations?setting=22" for ::1 at 2020-09-29 16:15:26 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"22"}
+  [1m[36mLocation Load (2.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 7ms (Views: 1.7ms | ActiveRecord: 2.0ms | Allocations: 2853)
+
+
+Started GET "/locations/undefined" for ::1 at 2020-09-29 16:15:27 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mLocation Load (1.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 3ms (ActiveRecord: 1.0ms | Allocations: 650)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/locations/undefined" for ::1 at 2020-09-29 16:16:17 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms | Allocations: 648)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/locations/undefined" for ::1 at 2020-09-29 16:16:20 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms | Allocations: 648)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/settings/" for ::1 at 2020-09-29 16:17:00 -0400
+Started GET "/locations/undefined" for ::1 at 2020-09-29 16:17:00 -0400
+Started GET "/locations?setting=undefined" for ::1 at 2020-09-29 16:17:00 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+Processing by LocationsController#index as */*
+Processing by SettingsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mLocation Load (0.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mSetting Load (0.5ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  [1m[36mLocation Load (0.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 2379)
+
+
+Completed 404 Not Found in 6ms (ActiveRecord: 0.9ms | Allocations: 3047)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 0.5ms | Allocations: 29282)
+
+
+Started GET "/locations?setting=22" for ::1 at 2020-09-29 16:17:01 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"22"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 2852)
+
+
+Started GET "/locations/undefined" for ::1 at 2020-09-29 16:17:08 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms | Allocations: 650)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/locations/undefined" for ::1 at 2020-09-29 16:18:02 -0400
+Started GET "/settings/" for ::1 at 2020-09-29 16:18:02 -0400
+Started GET "/locations?setting=undefined" for ::1 at 2020-09-29 16:18:02 -0400
+Processing by LocationsController#show as */*
+Processing by LocationsController#index as */*
+Processing by SettingsController#index as */*
+  Parameters: {"id"=>"undefined"}
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mSetting Load (0.9ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.9ms | Allocations: 1626)
+
+
+  [1m[36mLocation Load (20.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 22ms (ActiveRecord: 20.2ms | Allocations: 2320)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+  [1m[36mLocation Load (63.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 66ms (Views: 0.1ms | ActiveRecord: 63.0ms | Allocations: 29217)
+
+
+Started GET "/locations?setting=23" for ::1 at 2020-09-29 16:18:05 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"23"}
+  [1m[36mLocation Load (16.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 21ms (Views: 1.0ms | ActiveRecord: 16.9ms | Allocations: 2142)
+
+
+Started GET "/settings/" for ::1 at 2020-09-29 16:18:22 -0400
+Started GET "/locations/undefined" for ::1 at 2020-09-29 16:18:22 -0400
+Started GET "/locations?setting=undefined" for ::1 at 2020-09-29 16:18:22 -0400
+Processing by SettingsController#index as */*
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mSetting Load (2.8ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  [1m[36mLocation Load (2.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+  [1m[36mLocation Load (7.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 2.8ms | Allocations: 3170)
+
+
+Completed 404 Not Found in 9ms (ActiveRecord: 7.0ms | Allocations: 3209)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 2.5ms | Allocations: 2328)
+
+
+Started GET "/locations?setting=23" for ::1 at 2020-09-29 16:18:23 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"23"}
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 5ms (Views: 1.7ms | ActiveRecord: 0.4ms | Allocations: 2141)
+
+
+Started GET "/locations/undefined" for ::1 at 2020-09-29 16:18:24 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.5ms | Allocations: 650)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/settings/" for ::1 at 2020-09-29 16:20:13 -0400
+Started GET "/locations?setting=undefined" for ::1 at 2020-09-29 16:20:13 -0400
+Started GET "/locations/undefined" for ::1 at 2020-09-29 16:20:13 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+Processing by SettingsController#index as */*
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mSetting Load (3.9ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  [1m[36mLocation Load (6.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 10ms (ActiveRecord: 6.0ms | Allocations: 2110)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 12ms (Views: 6.7ms | ActiveRecord: 3.9ms | Allocations: 3148)
+
+
+  [1m[36mLocation Load (39.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 43ms (Views: 0.1ms | ActiveRecord: 39.9ms | Allocations: 29219)
+
+
+Started GET "/locations?setting=23" for ::1 at 2020-09-29 16:20:15 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"23"}
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.4ms | Allocations: 2142)
+
+
+Started GET "/locations/undefined" for ::1 at 2020-09-29 16:21:08 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms | Allocations: 650)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/settings/" for ::1 at 2020-09-29 16:22:56 -0400
+Started GET "/locations/undefined" for ::1 at 2020-09-29 16:22:56 -0400
+Started GET "/locations?setting=undefined" for ::1 at 2020-09-29 16:22:56 -0400
+Processing by SettingsController#index as */*
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+Processing by LocationsController#index as */*
+  [1m[36mSetting Load (1.8ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mLocation Load (2.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 1.8ms | Allocations: 2437)
+
+
+Completed 404 Not Found in 7ms (ActiveRecord: 2.0ms | Allocations: 2343)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+  [1m[36mLocation Load (5.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 35ms (Views: 0.2ms | ActiveRecord: 5.7ms | Allocations: 28530)
+
+
+Started GET "/locations?setting=24" for ::1 at 2020-09-29 16:22:58 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"24"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.3ms | Allocations: 2132)
+
+
+Started GET "/locations/undefined" for ::1 at 2020-09-29 16:23:20 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms | Allocations: 650)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/locations/undefined" for ::1 at 2020-09-29 16:23:21 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.3ms | Allocations: 649)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/locations/undefined" for ::1 at 2020-09-29 16:23:22 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms | Allocations: 648)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/locations?setting=21" for ::1 at 2020-09-29 16:23:53 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"21"}
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 0.4ms | Allocations: 3018)
+
+
+Started GET "/locations?setting=23" for ::1 at 2020-09-29 16:25:02 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"23"}
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.5ms | Allocations: 2142)
+
+
+Started GET "/locations/undefined" for ::1 at 2020-09-29 16:27:38 -0400
+Started GET "/settings/" for ::1 at 2020-09-29 16:27:38 -0400
+Started GET "/locations?setting=undefined" for ::1 at 2020-09-29 16:27:38 -0400
+Processing by SettingsController#index as */*
+Processing by LocationsController#index as */*
+  [1m[36mSetting Load (0.9ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+  Parameters: {"setting"=>"undefined"}
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.9ms | Allocations: 1749)
+
+
+  [1m[36mLocation Load (2.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 6ms (ActiveRecord: 2.9ms | Allocations: 1670)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+  [1m[36mLocation Load (45.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 48ms (Views: 0.2ms | ActiveRecord: 45.0ms | Allocations: 27855)
+
+
+Started GET "/locations?setting=22" for ::1 at 2020-09-29 16:27:39 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"22"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 2853)
+
+
+Started GET "/settings/" for ::1 at 2020-09-29 16:28:16 -0400
+Started GET "/locations/undefined" for ::1 at 2020-09-29 16:28:16 -0400
+Started GET "/locations?setting=undefined" for ::1 at 2020-09-29 16:28:16 -0400
+Processing by SettingsController#index as */*
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mSetting Load (0.6ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mLocation Load (1.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.6ms | Allocations: 2248)
+
+
+Completed 404 Not Found in 6ms (ActiveRecord: 1.2ms | Allocations: 1413)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+  [1m[36mLocation Load (32.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 37ms (Views: 0.3ms | ActiveRecord: 32.8ms | Allocations: 28538)
+
+
+Started GET "/locations?setting=22" for ::1 at 2020-09-29 16:28:17 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"22"}
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 2853)
+
+
+Started GET "/locations/132" for ::1 at 2020-09-29 16:28:21 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"132"}
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 132], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 814)
+
+
+Started GET "/locations/132" for ::1 at 2020-09-29 16:28:24 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"132"}
+  [1m[36mLocation Load (1.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 132], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 1.8ms | Allocations: 814)
+
+
+Started GET "/locations/133" for ::1 at 2020-09-29 16:28:28 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"133"}
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 133], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 814)
+
+
+Started GET "/locations/134" for ::1 at 2020-09-29 16:28:33 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"134"}
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 134], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 820)
+
+
+Started GET "/locations/134" for ::1 at 2020-09-29 16:28:35 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"134"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 134], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 820)
+
+
+Started GET "/locations/undefined" for ::1 at 2020-09-29 16:51:29 -0400
+Started GET "/settings/" for ::1 at 2020-09-29 16:51:29 -0400
+Started GET "/locations?setting=undefined" for ::1 at 2020-09-29 16:51:29 -0400
+Processing by SettingsController#index as */*
+Processing by LocationsController#index as */*
+Processing by LocationsController#show as */*
+  Parameters: {"setting"=>"undefined"}
+  Parameters: {"id"=>"undefined"}
+  [1m[36mSetting Load (2.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  [1m[36mLocation Load (1.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.7ms | Allocations: 2111)
+
+
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 2.3ms | Allocations: 2998)
+
+
+  [1m[36mLocation Load (16.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 19ms (ActiveRecord: 17.0ms | Allocations: 3824)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/locations?setting=undefined" for ::1 at 2020-09-29 16:51:36 -0400
+Started GET "/settings/" for ::1 at 2020-09-29 16:51:36 -0400
+Started GET "/locations/undefined" for ::1 at 2020-09-29 16:51:36 -0400
+Processing by LocationsController#index as */*
+Processing by SettingsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mSetting Load (1.5ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 1.5ms | Allocations: 1724)
+
+
+  [1m[36mLocation Load (3.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+  [1m[36mLocation Load (1.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 3.6ms | Allocations: 2978)
+
+
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 8ms (ActiveRecord: 2.4ms | Allocations: 3606)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/locations?setting=21" for ::1 at 2020-09-29 16:51:41 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"21"}
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 3018)
+
+
+Started GET "/locations/122" for ::1 at 2020-09-29 16:51:44 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"122"}
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 122], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 822)
+
+
+Started GET "/locations/123" for ::1 at 2020-09-29 16:51:48 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"123"}
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 123], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 814)
+
+
+Started GET "/locations/125" for ::1 at 2020-09-29 16:51:53 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"125"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 125], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 816)
+
+
+Started GET "/settings/" for ::1 at 2020-09-29 16:54:08 -0400
+Started GET "/locations?setting=undefined" for ::1 at 2020-09-29 16:54:08 -0400
+Started GET "/locations/undefined" for ::1 at 2020-09-29 16:54:08 -0400
+Processing by LocationsController#show as */*
+Processing by LocationsController#index as */*
+Processing by SettingsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  Parameters: {"id"=>"undefined"}
+  [1m[36mSetting Load (0.8ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+  [1m[36mLocation Load (0.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.8ms | Allocations: 1659)
+
+
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 5ms (ActiveRecord: 0.9ms | Allocations: 2078)
+
+
+  [1m[36mLocation Load (3.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 39ms (Views: 0.2ms | ActiveRecord: 3.0ms | Allocations: 29309)
+
+
+Started GET "/locations?setting=21" for ::1 at 2020-09-29 16:54:15 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"21"}
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 0.6ms | Allocations: 3018)
+
+
+Started GET "/locations/undefined" for ::1 at 2020-09-29 16:54:20 -0400
+Started GET "/settings/" for ::1 at 2020-09-29 16:54:20 -0400
+Started GET "/locations?setting=undefined" for ::1 at 2020-09-29 16:54:20 -0400
+Processing by LocationsController#show as */*
+Processing by SettingsController#index as */*
+  Parameters: {"id"=>"undefined"}
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mSetting Load (14.7ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+  [1m[36mLocation Load (14.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+Completed 200 OK in 17ms (Views: 2.0ms | ActiveRecord: 14.7ms | Allocations: 1691)
+
+
+  [1m[36mLocation Load (1.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 20ms (ActiveRecord: 15.5ms | Allocations: 3560)
+
+
+Completed 200 OK in 19ms (Views: 0.2ms | ActiveRecord: 14.5ms | Allocations: 3317)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/settings/" for ::1 at 2020-09-29 16:54:51 -0400
+Started GET "/locations/undefined" for ::1 at 2020-09-29 16:54:51 -0400
+Processing by SettingsController#index as */*
+Started GET "/locations?setting=undefined" for ::1 at 2020-09-29 16:54:51 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mSetting Load (2.5ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+  [1m[36mLocation Load (0.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 200 OK in 7ms (Views: 3.5ms | ActiveRecord: 2.5ms | Allocations: 2208)
+
+
+Processing by LocationsController#index as */*
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 6ms (ActiveRecord: 0.9ms | Allocations: 2534)
+
+
+  Parameters: {"setting"=>"undefined"}
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+  [1m[36mLocation Load (25.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 28ms (Views: 0.2ms | ActiveRecord: 25.8ms | Allocations: 26608)
+
+
+Started GET "/locations?setting=23" for ::1 at 2020-09-29 16:54:53 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"23"}
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 2142)
+
+
+Started GET "/settings/" for ::1 at 2020-09-29 16:55:26 -0400
+Started GET "/locations/undefined" for ::1 at 2020-09-29 16:55:26 -0400
+Started GET "/locations?setting=undefined" for ::1 at 2020-09-29 16:55:26 -0400
+Processing by SettingsController#index as */*
+Processing by LocationsController#show as */*
+Processing by LocationsController#index as */*
+  [1m[36mSetting Load (1.7ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  Parameters: {"id"=>"undefined"}
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+  Parameters: {"setting"=>"undefined"}
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 1.7ms | Allocations: 2193)
+
+
+  [1m[36mLocation Load (17.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mLocation Load (15.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 18ms (Views: 0.1ms | ActiveRecord: 15.6ms | Allocations: 1926)
+
+
+Completed 404 Not Found in 20ms (ActiveRecord: 17.1ms | Allocations: 2848)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/settings/" for ::1 at 2020-09-29 16:55:34 -0400
+Started GET "/locations/undefined" for ::1 at 2020-09-29 16:55:34 -0400
+Started GET "/locations?setting=undefined" for ::1 at 2020-09-29 16:55:34 -0400
+Processing by SettingsController#index as */*
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mSetting Load (3.4ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+  [1m[36mLocation Load (2.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mLocation Load (3.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+Completed 200 OK in 8ms (Views: 4.0ms | ActiveRecord: 3.4ms | Allocations: 2322)
+
+
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 3.2ms | Allocations: 3310)
+
+
+Completed 404 Not Found in 8ms (ActiveRecord: 2.8ms | Allocations: 3089)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/locations?setting=23" for ::1 at 2020-09-29 16:55:48 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"23"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 2141)
+
+
+Started GET "/locations/141" for ::1 at 2020-09-29 16:55:50 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"141"}
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 141], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 816)
+
+
+Started GET "/locations/142" for ::1 at 2020-09-29 16:55:52 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"142"}
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 142], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 816)
+
+
+Started GET "/locations?setting=undefined" for ::1 at 2020-09-29 16:56:53 -0400
+Started GET "/settings/" for ::1 at 2020-09-29 16:56:53 -0400
+Started GET "/locations/undefined" for ::1 at 2020-09-29 16:56:53 -0400
+Processing by LocationsController#index as */*
+Processing by SettingsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mSetting Load (1.5ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  [1m[36mLocation Load (1.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+  [1m[36mLocation Load (1.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 1.5ms | Allocations: 2164)
+
+
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 404 Not Found in 5ms (ActiveRecord: 1.2ms | Allocations: 2644)
+
+
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 3462)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/locations?setting=21" for ::1 at 2020-09-29 16:59:17 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"21"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.3ms | Allocations: 3018)
+
+
+Started GET "/locations?setting=21" for ::1 at 2020-09-29 16:59:18 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"21"}
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.4ms | Allocations: 3019)
+
+
+Started GET "/locations?setting=22" for ::1 at 2020-09-29 16:59:19 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"22"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 2853)
+
+
+Started GET "/locations?setting=23" for ::1 at 2020-09-29 16:59:20 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"23"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 2142)
+
+
+Started GET "/locations?setting=24" for ::1 at 2020-09-29 16:59:21 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"24"}
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.4ms | Allocations: 2132)
+
+
+Started GET "/locations?setting=25" for ::1 at 2020-09-29 16:59:22 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"25"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 2145)
+
+
+Started GET "/locations/undefined" for ::1 at 2020-09-29 17:02:07 -0400
+Started GET "/locations?setting=undefined" for ::1 at 2020-09-29 17:02:07 -0400
+Started GET "/settings/" for ::1 at 2020-09-29 17:02:07 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LocationsController#show as */*
+  [1m[35m (8.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SettingsController#index as */*
+  Parameters: {"id"=>"undefined"}
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mSetting Load (8.0ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  [1m[36mLocation Load (2.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 22ms (Views: 0.2ms | ActiveRecord: 6.8ms | Allocations: 9412)
+
+
+Completed 200 OK in 42ms (Views: 9.0ms | ActiveRecord: 27.3ms | Allocations: 17816)
+
+
+  [1m[36mLocation Load (0.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 38ms (ActiveRecord: 10.5ms | Allocations: 16305)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/locations?setting=23" for ::1 at 2020-09-29 17:02:12 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"23"}
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.5ms | Allocations: 2167)
+
+
+Started GET "/locations/141" for ::1 at 2020-09-29 17:02:17 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"141"}
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 141], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 835)
+
+
+Started GET "/locations?setting=25" for ::1 at 2020-09-29 17:02:23 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"25"}
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 2145)
+
+
+Started GET "/locations/151" for ::1 at 2020-09-29 17:02:25 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"151"}
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 151], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 814)
+
+
+Started GET "/locations/155" for ::1 at 2020-09-29 17:03:20 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"155"}
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 155], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 821)
+
+
+Started GET "/settings/" for ::1 at 2020-09-29 17:03:29 -0400
+Started GET "/locations/undefined" for ::1 at 2020-09-29 17:03:29 -0400
+Started GET "/locations?setting=undefined" for ::1 at 2020-09-29 17:03:29 -0400
+Processing by SettingsController#index as */*
+Processing by LocationsController#index as */*
+Processing by LocationsController#show as */*
+  Parameters: {"setting"=>"undefined"}
+  Parameters: {"id"=>"undefined"}
+  [1m[36mSetting Load (17.6ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+  [1m[36mLocation Load (0.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+Completed 200 OK in 20ms (Views: 2.6ms | ActiveRecord: 17.6ms | Allocations: 2340)
+
+
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 2948)
+
+
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 5ms (ActiveRecord: 1.5ms | Allocations: 3571)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/locations/undefined" for ::1 at 2020-09-29 19:39:47 -0400
+Started GET "/settings/" for ::1 at 2020-09-29 19:39:47 -0400
+Started GET "/locations?setting=undefined" for ::1 at 2020-09-29 19:39:47 -0400
+Processing by LocationsController#index as */*
+Processing by LocationsController#show as */*
+Processing by SettingsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  Parameters: {"id"=>"undefined"}
+  [1m[36mSetting Load (0.9ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.9ms | Allocations: 1707)
+
+
+  [1m[36mLocation Load (3.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  [1m[36mLocation Load (0.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 3.4ms | Allocations: 3523)
+
+
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 7ms (ActiveRecord: 1.1ms | Allocations: 3774)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/locations?setting=21" for ::1 at 2020-09-29 19:39:54 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"21"}
+  [1m[36mLocation Load (0.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 5ms (Views: 1.8ms | ActiveRecord: 0.9ms | Allocations: 3020)
+
+
+Started GET "/locations/122" for ::1 at 2020-09-29 19:40:01 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"122"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 122], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 822)
+
+
+Started GET "/locations/124" for ::1 at 2020-09-29 19:40:04 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"124"}
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 124], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 818)
+
+
+Started GET "/locations/129" for ::1 at 2020-09-29 19:40:08 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"129"}
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 129], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 816)
+
+
+Started GET "/locations/131" for ::1 at 2020-09-29 19:40:11 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"131"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 131], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 816)
+
+
+Started GET "/locations?setting=undefined" for ::1 at 2020-09-29 19:40:20 -0400
+Started GET "/settings/" for ::1 at 2020-09-29 19:40:20 -0400
+Started GET "/locations/undefined" for ::1 at 2020-09-29 19:40:20 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+Processing by LocationsController#show as */*
+Processing by SettingsController#index as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mLocation Load (1.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 1.2ms | Allocations: 1697)
+
+
+  [1m[36mSetting Load (2.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+  [1m[36mLocation Load (2.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 2.3ms | Allocations: 2970)
+
+
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 7ms (ActiveRecord: 2.8ms | Allocations: 3644)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/locations?setting=undefined" for ::1 at 2020-09-29 21:08:23 -0400
+Started GET "/locations/undefined" for ::1 at 2020-09-29 21:08:23 -0400
+Started GET "/settings/" for ::1 at 2020-09-29 21:08:23 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LocationsController#index as */*
+Processing by SettingsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mLocation Load (3.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+  [1m[36mSetting Load (1.5ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Completed 200 OK in 17ms (Views: 0.1ms | ActiveRecord: 7.1ms | Allocations: 11764)
+
+
+Completed 200 OK in 21ms (Views: 5.8ms | ActiveRecord: 12.1ms | Allocations: 15162)
+
+
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 35ms (ActiveRecord: 24.9ms | Allocations: 20802)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/locations?setting=21" for ::1 at 2020-09-29 21:08:38 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"21"}
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.5ms | Allocations: 3044)
+
+
+Started GET "/locations/122" for ::1 at 2020-09-29 21:08:41 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"122"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 122], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 841)
+
+
+Started GET "/locations?setting=25" for ::1 at 2020-09-29 21:08:43 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"25"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.3ms | Allocations: 2145)
+
+
+Started GET "/locations/151" for ::1 at 2020-09-29 21:08:44 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"151"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 151], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 814)
+
+
+Started GET "/locations/undefined" for ::1 at 2020-09-30 09:14:06 -0400
+Started GET "/locations?setting=undefined" for ::1 at 2020-09-30 09:14:06 -0400
+Started GET "/settings/" for ::1 at 2020-09-30 09:14:06 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+Processing by LocationsController#index as */*
+Processing by SettingsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mSetting Load (0.8ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+  [1m[36mLocation Load (2.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.8ms | Allocations: 1674)
+
+
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+  [1m[36mLocation Load (6.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+Completed 404 Not Found in 15ms (ActiveRecord: 5.2ms | Allocations: 2638)
+
+
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 6.5ms | Allocations: 4091)
+
+
+Started GET "/locations?setting=undefined" for 127.0.0.1 at 2020-09-30 09:47:00 -0400
+Started GET "/locations/undefined" for 127.0.0.1 at 2020-09-30 09:47:00 -0400
+Started GET "/settings/" for 127.0.0.1 at 2020-09-30 09:47:00 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mLocation Load (0.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 9104)
+
+
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+Processing by SettingsController#index as */*
+  [1m[36mSetting Load (13.4ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 41ms (ActiveRecord: 34.3ms | Allocations: 8214)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 33ms (Views: 6.3ms | ActiveRecord: 23.8ms | Allocations: 7753)
+
+
+Started GET "/locations/undefined" for 127.0.0.1 at 2020-09-30 09:47:30 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.9ms | Allocations: 692)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/locations?setting=undefined" for 127.0.0.1 at 2020-09-30 09:47:30 -0400
+Started GET "/settings/" for 127.0.0.1 at 2020-09-30 09:47:30 -0400
+Processing by LocationsController#index as */*
+Processing by SettingsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mSetting Load (0.5ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.5ms | Allocations: 1551)
+
+
+  [1m[36mLocation Load (1.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 1.7ms | Allocations: 8758)
+
+
+Started GET "/locations?setting=21" for 127.0.0.1 at 2020-09-30 09:47:34 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"21"}
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 3027)
+
+
+Started GET "/locations/undefined" for 127.0.0.1 at 2020-09-30 09:48:33 -0400
+Started GET "/settings/" for 127.0.0.1 at 2020-09-30 09:48:33 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 20ms (ActiveRecord: 14.9ms | Allocations: 5941)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/locations?setting=undefined" for 127.0.0.1 at 2020-09-30 09:48:33 -0400
+Processing by SettingsController#index as */*
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 16ms (Views: 6.5ms | ActiveRecord: 6.8ms | Allocations: 9543)
+
+
+Completed 200 OK in 22ms (Views: 0.1ms | ActiveRecord: 7.6ms | Allocations: 12893)
+
+
+Started GET "/locations?setting=24" for 127.0.0.1 at 2020-09-30 09:48:34 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"24"}
+  [1m[36mLocation Load (14.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 30ms (Views: 0.8ms | ActiveRecord: 17.4ms | Allocations: 10165)
+
+
+Started GET "/locations?setting=21" for 127.0.0.1 at 2020-09-30 09:48:37 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"21"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 35ms (Views: 1.5ms | ActiveRecord: 19.6ms | Allocations: 14004)
+
+
+Started GET "/settings/" for 127.0.0.1 at 2020-09-30 09:48:52 -0400
+Started GET "/locations/undefined" for 127.0.0.1 at 2020-09-30 09:48:52 -0400
+Started GET "/locations?setting=undefined" for 127.0.0.1 at 2020-09-30 09:48:52 -0400
+Processing by LocationsController#show as */*
+Processing by SettingsController#index as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mSetting Load (2.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Completed 200 OK in 30ms (Views: 6.0ms | ActiveRecord: 21.3ms | Allocations: 8004)
+
+
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 29ms (ActiveRecord: 25.6ms | Allocations: 7531)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 16ms (Views: 0.1ms | ActiveRecord: 3.1ms | Allocations: 9330)
+
+
+Started GET "/locations?setting=undefined" for 127.0.0.1 at 2020-09-30 09:50:59 -0400
+Started GET "/settings/" for 127.0.0.1 at 2020-09-30 09:50:59 -0400
+Started GET "/locations/undefined" for 127.0.0.1 at 2020-09-30 09:50:59 -0400
+Processing by LocationsController#show as */*
+Processing by LocationsController#index as */*
+  Parameters: {"id"=>"undefined"}
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 1.9ms | Allocations: 7908)
+
+
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 17ms (ActiveRecord: 2.8ms | Allocations: 10826)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Processing by SettingsController#index as */*
+  [1m[36mSetting Load (0.6ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Completed 200 OK in 14ms (Views: 6.1ms | ActiveRecord: 4.8ms | Allocations: 6401)
+
+
+Started GET "/settings/" for 127.0.0.1 at 2020-09-30 09:50:59 -0400
+Started GET "/locations/undefined" for 127.0.0.1 at 2020-09-30 09:50:59 -0400
+Started GET "/locations?setting=undefined" for 127.0.0.1 at 2020-09-30 09:50:59 -0400
+Processing by LocationsController#show as */*
+Processing by SettingsController#index as */*
+  Parameters: {"id"=>"undefined"}
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mSetting Load (0.5ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.5ms | Allocations: 2106)
+
+
+  [1m[36mLocation Load (1.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+Completed 404 Not Found in 3ms (ActiveRecord: 0.7ms | Allocations: 2140)
+
+
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.9ms | Allocations: 3809)
+
+
+Started GET "/locations?setting=21" for 127.0.0.1 at 2020-09-30 09:51:00 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"21"}
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 33ms (Views: 1.6ms | ActiveRecord: 19.6ms | Allocations: 11113)
+
+
+Started GET "/locations?setting=21" for 127.0.0.1 at 2020-09-30 09:51:08 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"21"}
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 17ms (Views: 1.5ms | ActiveRecord: 3.4ms | Allocations: 11091)
+
+
+Started GET "/locations?setting=21" for 127.0.0.1 at 2020-09-30 09:52:11 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"21"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 17ms (Views: 1.5ms | ActiveRecord: 3.1ms | Allocations: 11091)
+
+
+Started GET "/locations?setting=22" for 127.0.0.1 at 2020-09-30 09:52:13 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"22"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.3ms | Allocations: 2853)
+
+
+Started GET "/locations?setting=23" for 127.0.0.1 at 2020-09-30 09:52:14 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"23"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.3ms | Allocations: 2142)
+
+
+Started GET "/locations?setting=24" for 127.0.0.1 at 2020-09-30 09:52:14 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"24"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 2132)
+
+
+Started GET "/locations/146" for 127.0.0.1 at 2020-09-30 09:52:16 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"146"}
+  [1m[36mLocation Load (16.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 146], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 19ms (Views: 0.4ms | ActiveRecord: 16.9ms | Allocations: 949)
+
+
+Started GET "/locations/undefined" for 127.0.0.1 at 2020-09-30 09:52:35 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms | Allocations: 651)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/locations?setting=undefined" for 127.0.0.1 at 2020-09-30 09:52:35 -0400
+Started GET "/settings/" for 127.0.0.1 at 2020-09-30 09:52:35 -0400
+Processing by LocationsController#index as */*
+Processing by SettingsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mSetting Load (0.5ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+  [1m[36mLocation Load (1.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 1987)
+
+
+Completed 200 OK in 12ms (Views: 5.6ms | ActiveRecord: 3.7ms | Allocations: 7786)
+
+
+Started GET "/locations?setting=23" for ::1 at 2020-09-30 09:55:06 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"23"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 18ms (Views: 1.1ms | ActiveRecord: 3.0ms | Allocations: 10214)
+
+
+Started GET "/locations/141" for ::1 at 2020-09-30 09:55:09 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"141"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 141], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 923)
+
+
+Started GET "/locations?setting=21" for 127.0.0.1 at 2020-09-30 09:58:19 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"21"}
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.5ms | Allocations: 3019)
+
+
+Started GET "/locations/122" for 127.0.0.1 at 2020-09-30 09:58:21 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"122"}
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 122], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 822)
+
+
+Started GET "/locations?setting=24" for ::1 at 2020-09-30 10:02:06 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"24"}
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.4ms | Allocations: 2132)
+
+
+Started GET "/locations/149" for ::1 at 2020-09-30 10:02:13 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"149"}
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 149], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 814)
+
+
+Started GET "/settings/" for 127.0.0.1 at 2020-09-30 10:11:48 -0400
+Started GET "/locations/undefined" for 127.0.0.1 at 2020-09-30 10:11:48 -0400
+Started GET "/locations?setting=undefined" for 127.0.0.1 at 2020-09-30 10:11:48 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mLocation Load (1.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  [1m[36mLocation Load (0.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 2087)
+
+
+Completed 404 Not Found in 5ms (ActiveRecord: 1.7ms | Allocations: 2402)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Processing by SettingsController#index as */*
+  [1m[36mSetting Load (0.6ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Completed 200 OK in 14ms (Views: 6.4ms | ActiveRecord: 5.5ms | Allocations: 6435)
+
+
+Started GET "/settings/" for 127.0.0.1 at 2020-09-30 10:11:56 -0400
+Started GET "/locations/undefined" for 127.0.0.1 at 2020-09-30 10:11:56 -0400
+Processing by SettingsController#index as */*
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mSetting Load (0.5ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.5ms | Allocations: 1527)
+
+
+  [1m[36mLocation Load (16.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 18ms (ActiveRecord: 16.8ms | Allocations: 2208)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/locations?setting=undefined" for 127.0.0.1 at 2020-09-30 10:11:56 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 1268)
+
+
+Started GET "/locations?setting=21" for 127.0.0.1 at 2020-09-30 10:12:01 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"21"}
+  [1m[36mLocation Load (15.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 19ms (Views: 1.4ms | ActiveRecord: 15.8ms | Allocations: 3019)
+
+
+Started GET "/locations/122" for 127.0.0.1 at 2020-09-30 10:12:02 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"122"}
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 122], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 822)
+
+
+Started GET "/locations/undefined" for 127.0.0.1 at 2020-09-30 10:12:25 -0400
+Started GET "/settings/" for 127.0.0.1 at 2020-09-30 10:12:25 -0400
+Started GET "/locations?setting=undefined" for 127.0.0.1 at 2020-09-30 10:12:25 -0400
+Processing by SettingsController#index as */*
+Processing by LocationsController#show as */*
+Processing by LocationsController#index as */*
+  Parameters: {"id"=>"undefined"}
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mSetting Load (0.8ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+  [1m[36mLocation Load (1.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.5ms | Allocations: 1431)
+
+
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.8ms | Allocations: 2750)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.1ms | Allocations: 3682)
+
+
+Started GET "/locations/undefined" for 127.0.0.1 at 2020-09-30 10:13:07 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.3ms | Allocations: 677)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/locations?setting=undefined" for 127.0.0.1 at 2020-09-30 10:13:07 -0400
+Started GET "/settings/" for 127.0.0.1 at 2020-09-30 10:13:07 -0400
+Processing by LocationsController#index as */*
+Processing by SettingsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mSetting Load (0.7ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.7ms | Allocations: 2039)
+
+
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 2629)
+
+
+Started GET "/locations/undefined" for 127.0.0.1 at 2020-09-30 10:13:08 -0400
+Started GET "/settings/" for 127.0.0.1 at 2020-09-30 10:13:08 -0400
+Started GET "/locations?setting=undefined" for 127.0.0.1 at 2020-09-30 10:13:08 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Processing by SettingsController#index as */*
+Processing by LocationsController#index as */*
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+  Parameters: {"setting"=>"undefined"}
+Completed 404 Not Found in 3ms (ActiveRecord: 0.5ms | Allocations: 1416)
+
+
+  [1m[36mSetting Load (0.8ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+  [1m[36mLocation Load (16.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.8ms | Allocations: 27462)
+
+
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 20ms (Views: 0.1ms | ActiveRecord: 16.8ms | Allocations: 28613)
+
+
+Started GET "/settings/" for ::1 at 2020-09-30 10:13:58 -0400
+Started GET "/locations/undefined" for ::1 at 2020-09-30 10:13:58 -0400
+Started GET "/locations?setting=undefined" for ::1 at 2020-09-30 10:13:58 -0400
+Processing by SettingsController#index as */*
+  [1m[36mSetting Load (0.6ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Processing by LocationsController#show as */*
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.6ms | Allocations: 2094)
+
+
+Processing by LocationsController#index as */*
+  Parameters: {"id"=>"undefined"}
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mLocation Load (1.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 3ms (ActiveRecord: 1.4ms | Allocations: 782)
+
+
+  [1m[36mLocation Load (1.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 41ms (Views: 0.2ms | ActiveRecord: 1.4ms | Allocations: 27662)
+
+
+Started GET "/locations?setting=undefined" for 127.0.0.1 at 2020-09-30 10:14:04 -0400
+Started GET "/settings/" for 127.0.0.1 at 2020-09-30 10:14:04 -0400
+Started GET "/locations/undefined" for 127.0.0.1 at 2020-09-30 10:14:04 -0400
+Processing by LocationsController#index as */*
+Processing by SettingsController#index as */*
+Processing by LocationsController#show as */*
+  Parameters: {"setting"=>"undefined"}
+  Parameters: {"id"=>"undefined"}
+  [1m[36mSetting Load (0.7ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.7ms | Allocations: 1654)
+
+
+  [1m[36mLocation Load (1.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+  [1m[36mLocation Load (0.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.8ms | Allocations: 2959)
+
+
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 5ms (ActiveRecord: 1.6ms | Allocations: 3627)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/locations?setting=22" for ::1 at 2020-09-30 10:14:15 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"22"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 2852)
+
+
+Started GET "/locations/132" for ::1 at 2020-09-30 10:14:20 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"132"}
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 132], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 814)
+
+
+Started GET "/locations/133" for ::1 at 2020-09-30 10:14:22 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"133"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 133], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 814)
+
+
+Started GET "/locations/undefined" for 127.0.0.1 at 2020-09-30 10:14:38 -0400
+Started GET "/locations?setting=undefined" for 127.0.0.1 at 2020-09-30 10:14:38 -0400
+Processing by LocationsController#show as */*
+Processing by LocationsController#index as */*
+  Parameters: {"id"=>"undefined"}
+  Parameters: {"setting"=>"undefined"}
+Started GET "/settings/" for 127.0.0.1 at 2020-09-30 10:14:38 -0400
+  [1m[36mLocation Load (1.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+  [1m[36mLocation Load (1.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+Completed 404 Not Found in 3ms (ActiveRecord: 1.2ms | Allocations: 959)
+
+
+Processing by SettingsController#index as */*
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 2759)
+
+
+  [1m[36mSetting Load (48.9ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Completed 200 OK in 56ms (Views: 6.5ms | ActiveRecord: 48.9ms | Allocations: 27681)
+
+
+Started GET "/locations/undefined" for 127.0.0.1 at 2020-09-30 10:14:57 -0400
+Started GET "/settings/" for 127.0.0.1 at 2020-09-30 10:14:57 -0400
+Started GET "/locations?setting=undefined" for 127.0.0.1 at 2020-09-30 10:14:57 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+Processing by SettingsController#index as */*
+  [1m[36mLocation Load (1.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mSetting Load (0.4ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Processing by LocationsController#index as */*
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Completed 404 Not Found in 7ms (ActiveRecord: 1.3ms | Allocations: 1759)
+
+
+  Parameters: {"setting"=>"undefined"}
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.4ms | Allocations: 2395)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+  [1m[36mLocation Load (57.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 59ms (Views: 0.1ms | ActiveRecord: 57.0ms | Allocations: 26804)
+
+
+Started GET "/locations/undefined" for 127.0.0.1 at 2020-09-30 10:15:24 -0400
+Started GET "/locations?setting=undefined" for 127.0.0.1 at 2020-09-30 10:15:24 -0400
+Started GET "/settings/" for 127.0.0.1 at 2020-09-30 10:15:24 -0400
+Processing by LocationsController#index as */*
+Processing by SettingsController#index as */*
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mSetting Load (0.8ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.8ms | Allocations: 2105)
+
+
+  [1m[36mLocation Load (2.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+Completed 404 Not Found in 3ms (ActiveRecord: 0.5ms | Allocations: 2112)
+
+
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 2.4ms | Allocations: 3874)
+
+
+Started GET "/locations/undefined" for 127.0.0.1 at 2020-09-30 10:15:45 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+Started GET "/settings/" for 127.0.0.1 at 2020-09-30 10:15:45 -0400
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Started GET "/locations?setting=undefined" for 127.0.0.1 at 2020-09-30 10:15:45 -0400
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.6ms | Allocations: 993)
+
+
+Processing by SettingsController#index as */*
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+  [1m[36mSetting Load (16.8ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Completed 200 OK in 19ms (Views: 2.3ms | ActiveRecord: 16.8ms | Allocations: 27103)
+
+
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mLocation Load (7.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 7.8ms | Allocations: 1268)
+
+
+Started GET "/settings/" for 127.0.0.1 at 2020-09-30 10:19:03 -0400
+Started GET "/locations/undefined" for 127.0.0.1 at 2020-09-30 10:19:03 -0400
+Started GET "/locations?setting=undefined" for 127.0.0.1 at 2020-09-30 10:19:03 -0400
+Processing by SettingsController#index as */*
+  [1m[36mSetting Load (0.4ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Processing by LocationsController#index as */*
+Processing by LocationsController#show as */*
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.4ms | Allocations: 2098)
+
+
+  Parameters: {"id"=>"undefined"}
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.5ms | Allocations: 815)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+  [1m[36mLocation Load (1.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 30ms (Views: 0.1ms | ActiveRecord: 1.1ms | Allocations: 27661)
+
+
+Started GET "/locations/undefined" for 127.0.0.1 at 2020-09-30 10:20:01 -0400
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.4ms | Allocations: 650)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/settings/" for 127.0.0.1 at 2020-09-30 10:20:01 -0400
+Started GET "/locations?setting=undefined" for 127.0.0.1 at 2020-09-30 10:20:01 -0400
+Processing by SettingsController#index as */*
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mSetting Load (0.5ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.5ms | Allocations: 1564)
+
+
+  [1m[36mLocation Load (1.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.7ms | Allocations: 2824)
+
+
+Started GET "/locations/undefined" for 127.0.0.1 at 2020-09-30 10:20:26 -0400
+Started GET "/locations?setting=undefined" for 127.0.0.1 at 2020-09-30 10:20:26 -0400
+Processing by LocationsController#show as */*
+Processing by LocationsController#index as */*
+  Parameters: {"id"=>"undefined"}
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.4ms | Allocations: 764)
+
+
+  [1m[36mLocation Load (1.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 20ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 27658)
+
+
+Started GET "/settings/" for 127.0.0.1 at 2020-09-30 10:20:26 -0400
+Processing by SettingsController#index as */*
+  [1m[36mSetting Load (0.4ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 1437)
+
+
+Started GET "/locations?setting=undefined" for 127.0.0.1 at 2020-09-30 10:21:07 -0400
+Started GET "/settings/" for 127.0.0.1 at 2020-09-30 10:21:07 -0400
+Started GET "/locations/undefined" for 127.0.0.1 at 2020-09-30 10:21:07 -0400
+Processing by LocationsController#index as */*
+Processing by SettingsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+Processing by LocationsController#show as */*
+  [1m[36mSetting Load (1.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 1.1ms | Allocations: 1781)
+
+
+  Parameters: {"id"=>"undefined"}
+  [1m[36mLocation Load (2.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 2.1ms | Allocations: 2949)
+
+
+Completed 404 Not Found in 3ms (ActiveRecord: 0.6ms | Allocations: 1825)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/settings/" for 127.0.0.1 at 2020-09-30 10:21:13 -0400
+Started GET "/locations?setting=undefined" for 127.0.0.1 at 2020-09-30 10:21:13 -0400
+Started GET "/locations/undefined" for 127.0.0.1 at 2020-09-30 10:21:13 -0400
+Processing by SettingsController#index as */*
+Processing by LocationsController#index as */*
+Processing by LocationsController#show as */*
+  Parameters: {"setting"=>"undefined"}
+  Parameters: {"id"=>"undefined"}
+  [1m[36mSetting Load (0.9ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.9ms | Allocations: 1662)
+
+
+  [1m[36mLocation Load (2.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  [1m[36mLocation Load (3.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 2.5ms | Allocations: 3364)
+
+
+Completed 404 Not Found in 8ms (ActiveRecord: 3.2ms | Allocations: 3387)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/settings/" for 127.0.0.1 at 2020-09-30 10:21:17 -0400
+Started GET "/locations?setting=undefined" for 127.0.0.1 at 2020-09-30 10:21:17 -0400
+Started GET "/locations/undefined" for 127.0.0.1 at 2020-09-30 10:21:17 -0400
+Processing by SettingsController#index as */*
+Processing by LocationsController#show as */*
+Processing by LocationsController#index as */*
+  Parameters: {"id"=>"undefined"}
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mSetting Load (0.4ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.4ms | Allocations: 1661)
+
+
+  [1m[36mLocation Load (2.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mLocation Load (2.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 2.3ms | Allocations: 3268)
+
+
+Completed 404 Not Found in 5ms (ActiveRecord: 2.1ms | Allocations: 3501)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/settings/" for 127.0.0.1 at 2020-09-30 10:28:32 -0400
+Started GET "/locations/undefined" for 127.0.0.1 at 2020-09-30 10:28:32 -0400
+Processing by SettingsController#index as */*
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mSetting Load (0.9ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.9ms | Allocations: 1613)
+
+
+  [1m[36mLocation Load (1.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 3ms (ActiveRecord: 1.3ms | Allocations: 2361)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Started GET "/locations?setting=undefined" for 127.0.0.1 at 2020-09-30 10:28:32 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 1268)
+
+
+Started GET "/settings/" for 127.0.0.1 at 2020-09-30 10:28:40 -0400
+Started GET "/locations/undefined" for 127.0.0.1 at 2020-09-30 10:28:40 -0400
+Started GET "/locations?setting=undefined" for 127.0.0.1 at 2020-09-30 10:28:40 -0400
+Processing by SettingsController#index as */*
+Processing by LocationsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mSetting Load (0.7ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.7ms | Allocations: 1752)
+
+
+  [1m[36mLocation Load (0.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/locations_controller.rb:17:in `show'
+Completed 404 Not Found in 4ms (ActiveRecord: 1.0ms | Allocations: 2308)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Location with 'id'=undefined):
+  
+app/controllers/locations_controller.rb:17:in `show'
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 1339)
+
+
+Started GET "/locations?setting=21" for 127.0.0.1 at 2020-09-30 10:30:14 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"21"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.3ms | Allocations: 3019)
+
+
+Started GET "/locations?setting=22" for 127.0.0.1 at 2020-09-30 10:30:26 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"22"}
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.4ms | Allocations: 2853)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7464188918714346840)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateLocations (20200926175054)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.5ms)[0m  [1m[35mDROP TABLE "locations"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20200926175054"]]
+  [1m[35m (24.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7464188918714346840)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (15.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7464188918714346840)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateScenes (20200926174835)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (18.0ms)[0m  [1m[35mDROP TABLE "scenes"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20200926174835"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7464188918714346840)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7464188918714346840)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateSettings (20200926165204)
+  [1m[35m (12.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.3ms)[0m  [1m[35mDROP TABLE "settings"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20200926165204"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7464188918714346840)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7464188918714346840)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7464188918714346840)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7464188918714346840)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7464188918714346840)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7464188918714346840)[0m
+  [1m[35m (17.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateSettings (20200926165204)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "settings" ("id" bigserial primary key, "name" character varying, "image_url" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200926165204"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateScenes (20200926174835)
+  [1m[35m (15.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "scenes" ("id" bigserial primary key, "name" character varying, "location_id" integer, "setting_id" integer, "shoot_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200926174835"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateLocations (20200926175054)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "locations" ("id" bigserial primary key, "borough" character varying, "name" character varying, "address" character varying, "contact_name" character varying, "contact_phone" character varying, "image_url" character varying, "category_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200926175054"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateShoots (20200930143431)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (23.7ms)[0m  [1m[35mCREATE TABLE "shoots" ("id" bigserial primary key, "date" character varying, "title" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200930143431"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7464188918714346840)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mSetting Load (0.5ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes"[0m
+  [1m[35m (13.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSetting Create (0.6ms)[0m  [1m[32mINSERT INTO "settings" ("name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Parks"], ["image_url", "https://images.unsplash.com/photo-1519331379826-f10be5486c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"], ["created_at", "2020-09-30 14:40:11.624491"], ["updated_at", "2020-09-30 14:40:11.624491"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSetting Create (0.2ms)[0m  [1m[32mINSERT INTO "settings" ("name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Bars"], ["image_url", "https://assets3.thrillist.com/v1/image/2700341/1584x1054/crop;jpeg_quality=60.jpg"], ["created_at", "2020-09-30 14:40:11.648148"], ["updated_at", "2020-09-30 14:40:11.648148"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSetting Create (1.6ms)[0m  [1m[32mINSERT INTO "settings" ("name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Hospitals"], ["image_url", "https://www.healthcareitnews.com/sites/hitn/files/120319%20CaroMont%20Regional%20Medical%20Center%20712.jpg"], ["created_at", "2020-09-30 14:40:11.658821"], ["updated_at", "2020-09-30 14:40:11.658821"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSetting Create (15.2ms)[0m  [1m[32mINSERT INTO "settings" ("name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Restaurants"], ["image_url", "https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=2000&h=1333&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2020%2F04%2F22%2Fchefs-predict-future-of-restaurants-after-coronavirus-FT-BLOG0420-2.jpg"], ["created_at", "2020-09-30 14:40:11.669251"], ["updated_at", "2020-09-30 14:40:11.669251"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSetting Create (0.2ms)[0m  [1m[32mINSERT INTO "settings" ("name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Movie Theaters"], ["image_url", "https://s7d2.scene7.com/is/image/TWCNews/getty_movie_theaterjpg"], ["created_at", "2020-09-30 14:40:11.696273"], ["updated_at", "2020-09-30 14:40:11.696273"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLocation Create (16.6ms)[0m  [1m[32mINSERT INTO "locations" ("borough", "name", "address", "contact_name", "contact_phone", "image_url", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["borough", "Manhattan"], ["name", "Central Park"], ["address", "New York, NY"], ["contact_name", "New York City Department of Parks and Recreation"], ["contact_phone", "2123106600"], ["image_url", "https://nypost.com/wp-content/uploads/sites/2/2018/07/central-park-conservancy.jpg?quality=80&strip=all&w=618&h=410&crop=1"], ["category_id", 1], ["created_at", "2020-09-30 14:40:11.722252"], ["updated_at", "2020-09-30 14:40:11.722252"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("borough", "name", "address", "contact_name", "contact_phone", "image_url", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["borough", "Manhattan"], ["name", "Washington Square Park"], ["address", "New York, NY 10012"], ["contact_name", "New York City Department of Parks and Recreation"], ["contact_phone", "2126399675"], ["image_url", "https://imgs.6sqft.com/wp-content/uploads/2018/08/01103439/WashingtonSquarePark.png"], ["category_id", 1], ["created_at", "2020-09-30 14:40:11.745020"], ["updated_at", "2020-09-30 14:40:11.745020"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.3ms)[0m  [1m[32mINSERT INTO "locations" ("borough", "name", "address", "contact_name", "contact_phone", "image_url", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["borough", "Queens"], ["name", "Flushing Meadows Corona Park"], ["address", "Grand Central Pkwy and Van Wyck Expy, 11354"], ["contact_name", "New York City Department of Parks and Recreation"], ["contact_phone", "2126399675"], ["image_url", "https://images.squarespace-cdn.com/content/v1/57867be8c534a55abe83b3f5/1550689363018-NJP82A36F1RYZ6YTI1M4/ke17ZwdGBToddI8pDm48kPhtPOj_F-mcA6PtUqHd3_5Zw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIgrZR7LDDJRlHoglng1hlEGU0SrC8f1o0bI6g4deGykIKMshLAGzx4R3EDFOm1kBS/2018_2019-new-large-flushing_meadows_corona-zaq_landsberg.jpg?format=2500w"], ["category_id", 1], ["created_at", "2020-09-30 14:40:11.755141"], ["updated_at", "2020-09-30 14:40:11.755141"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.3ms)[0m  [1m[32mINSERT INTO "locations" ("borough", "name", "address", "contact_name", "contact_phone", "image_url", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["borough", "Queens"], ["name", "Alley Pond Park"], ["address", "Union Tpke, Oakland Gardens, NY 11364"], ["contact_name", "New York City Department of Parks and Recreation"], ["contact_phone", "2126399675"], ["image_url", "https://www.nycgovparks.org/photo_gallery/full_size/23194.jpg"], ["category_id", 1], ["created_at", "2020-09-30 14:40:11.759898"], ["updated_at", "2020-09-30 14:40:11.759898"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.3ms)[0m  [1m[32mINSERT INTO "locations" ("borough", "name", "address", "contact_name", "contact_phone", "image_url", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["borough", "Brooklyn"], ["name", "Prospect Park"], ["address", "334 Furman St, Brooklyn, NY 11201"], ["contact_name", "New York City Department of Parks and Recreation"], ["contact_phone", "2126399675"], ["image_url", "https://static01.nyt.com/images/2018/07/15/travel/05prospect-4/05prospect-4-superJumbo.jpg"], ["category_id", 1], ["created_at", "2020-09-30 14:40:11.764620"], ["updated_at", "2020-09-30 14:40:11.764620"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("borough", "name", "address", "contact_name", "contact_phone", "image_url", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["borough", "Brooklyn"], ["name", "Brooklyn Bridge Park"], ["address", "Brooklyn, NY"], ["contact_name", "New York City Department of Parks and Recreation"], ["contact_phone", "2126399675"], ["image_url", "https://www.nycgo.com/images/made/fa6028b8f93bfe59/02-BrooklynBridgePark-Julienne_Schaer_900_600_70_c1.jpg"], ["category_id", 1], ["created_at", "2020-09-30 14:40:11.769303"], ["updated_at", "2020-09-30 14:40:11.769303"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSetting Load (16.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.3ms)[0m  [1m[32mINSERT INTO "locations" ("borough", "name", "address", "contact_name", "contact_phone", "image_url", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["borough", "Bronx"], ["name", "Bronx Park"], ["address", "The Bronx, NY 10467"], ["contact_name", "New York City Department of Parks and Recreation"], ["contact_phone", "2126399675"], ["image_url", "https://nysufc.org/wp-content/uploads/2016/08/Bronx-river-restoration.jpg"], ["category_id", 1], ["created_at", "2020-09-30 14:40:11.789744"], ["updated_at", "2020-09-30 14:40:11.789744"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSetting Load (0.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("borough", "name", "address", "contact_name", "contact_phone", "image_url", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["borough", "Bronx"], ["name", "Barretto Point Park"], ["address", "Viele Ave, The Bronx, NY 10474"], ["contact_name", "New York City Department of Parks and Recreation"], ["contact_phone", "2126399675"], ["image_url", "https://www.nycgovparks.org/photo_gallery/full_size/17741.jpg"], ["category_id", 1], ["created_at", "2020-09-30 14:40:11.794175"], ["updated_at", "2020-09-30 14:40:11.794175"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("borough", "name", "address", "contact_name", "contact_phone", "image_url", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["borough", "Staten Island"], ["name", "Clove Lakes Park"], ["address", "1150 Clove Rd, Staten Island, NY 10301"], ["contact_name", "New York City Department of Parks and Recreation"], ["contact_phone", "2126399675"], ["image_url", "https://www.nycgovparks.org/photo_gallery/full_size/18067.jpg"], ["category_id", 1], ["created_at", "2020-09-30 14:40:11.798707"], ["updated_at", "2020-09-30 14:40:11.798707"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSetting Load (0.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.3ms)[0m  [1m[32mINSERT INTO "locations" ("borough", "name", "address", "contact_name", "contact_phone", "image_url", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["borough", "Staten Island"], ["name", "Wolfe's Pond Park"], ["address", "420 Cornelia Ave, Staten Island, NY 10312"], ["contact_name", "New York City Department of Parks and Recreation"], ["contact_phone", "2126399675"], ["image_url", "https://www.nycgovparks.org/photo_gallery/full_size/23221.jpg"], ["category_id", 1], ["created_at", "2020-09-30 14:40:11.802894"], ["updated_at", "2020-09-30 14:40:11.802894"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (16.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSetting Load (0.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.3ms)[0m  [1m[32mINSERT INTO "locations" ("borough", "name", "address", "contact_name", "contact_phone", "image_url", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["borough", "Manhattan"], ["name", "BAR GOTO"], ["address", "245 Eldridge St, New York, NY 10002"], ["contact_name", "Benito Bauch"], ["contact_phone", "2124754411"], ["image_url", "https://www.meltingbutter.com/wp-content/uploads/2016/02/BG-1006-2-1024x693.jpg"], ["category_id", 2], ["created_at", "2020-09-30 14:40:11.940718"], ["updated_at", "2020-09-30 14:40:11.940718"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSetting Load (0.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("borough", "name", "address", "contact_name", "contact_phone", "image_url", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["borough", "Manhattan"], ["name", "Bar Belly"], ["address", "14 Orchard St, New York, NY 10002"], ["contact_name", "Darrick Hintz I"], ["contact_phone", "9174880943"], ["image_url", "https://images.squarespace-cdn.com/content/v1/5a285812f6576e64a110d532/1524593415141-EOEVMW6022UUV7VAYLP5/ke17ZwdGBToddI8pDm48kBhDrS7tNZKIc7ylLb-qEAJ7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UaS7293_DSBGpB9dLeZrnz5BsojC3FR4HF2USRxP2OFYNtOdhUU1hOx5CbfNRG0RmA/PorterGabi-9954+%281%29.jpg"], ["category_id", 2], ["created_at", "2020-09-30 14:40:11.945934"], ["updated_at", "2020-09-30 14:40:11.945934"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("borough", "name", "address", "contact_name", "contact_phone", "image_url", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["borough", "Queens"], ["name", "Leaf Bar & Lounge"], ["address", "13342 39th Ave, Queens, NY 11354"], ["contact_name", "Prof. Basil Feil"], ["contact_phone", "7188658158"], ["image_url", "https://www.worldsbestbars.com/wp-content/uploads/2018/05/bar_640_480_Leaf-Bar-1_561cc9a2c8979.jpg"], ["category_id", 2], ["created_at", "2020-09-30 14:40:11.950669"], ["updated_at", "2020-09-30 14:40:11.950669"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSetting Load (0.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("borough", "name", "address", "contact_name", "contact_phone", "image_url", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["borough", "Queens"], ["name", "C Bar & Lounge"], ["address", "87-22 Lefferts Blvd, Queens, NY 11418"], ["contact_name", "Rosenda Nolan DO"], ["contact_phone", "3474750948"], ["image_url", "https://lh3.googleusercontent.com/proxy/__fWBop6sgAWAk5RU3rHf1emeVmKX3qCJCvTXez3mcu4TMkdda5g_cjYwYJ75rka0ida7dRGpEULZgZ9fyYSiEYC3NL7oRGVLNDsJC6-zlG4"], ["category_id", 2], ["created_at", "2020-09-30 14:40:11.955455"], ["updated_at", "2020-09-30 14:40:11.955455"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSetting Load (0.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.3ms)[0m  [1m[32mINSERT INTO "locations" ("borough", "name", "address", "contact_name", "contact_phone", "image_url", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["borough", "Brooklyn"], ["name", "A Bar Brooklyn"], ["address", "597 Manhattan Ave, Brooklyn, NY 11222"], ["contact_name", "Dave McLaughlin CPA"], ["contact_phone", "3476874703"], ["image_url", "https://images.squarespace-cdn.com/content/v1/521c4164e4b03dae28cfb6b9/1505404821744-S6G888KV2CN5EYNBEJY8/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/A-BAR_BROOKLYN-PHOTO+14.JPG"], ["category_id", 2], ["created_at", "2020-09-30 14:40:11.960073"], ["updated_at", "2020-09-30 14:40:11.960073"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSetting Load (0.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.3ms)[0m  [1m[32mINSERT INTO "locations" ("borough", "name", "address", "contact_name", "contact_phone", "image_url", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["borough", "Brooklyn"], ["name", "Sweet Brooklyn Bar"], ["address", "608 Nostrand Ave, Brooklyn, NY 11216"], ["contact_name", "Barney O'Keefe"], ["contact_phone", "3474250111"], ["image_url", "https://live.staticflickr.com/4580/38360533676_c31419ee00_b.jpg"], ["category_id", 2], ["created_at", "2020-09-30 14:40:11.964643"], ["updated_at", "2020-09-30 14:40:11.964643"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSetting Load (10.8ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.3ms)[0m  [1m[32mINSERT INTO "locations" ("borough", "name", "address", "contact_name", "contact_phone", "image_url", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["borough", "Bronx"], ["name", "Charlies Bar & Kitchen"], ["address", "112 Lincoln Ave, The Bronx, NY 10454"], ["contact_name", "Jon Hudson DVM"], ["contact_phone", "7186842338"], ["image_url", "https://images.squarespace-cdn.com/content/v1/5d6169a05fea8500015d43bb/1567186928136-G5LL2B3VB6WTV9WGSP2F/ke17ZwdGBToddI8pDm48kNCH0IFo-E28D0rm_d_wnF4UqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKczdH3qUBwO6oWXP_OkYMa5KbLFw5Om5Yp_Nt25Y6nc5ZZuUUY1FOqARMqv9i1pcqr/Photo-1.jpg?format=1500w"], ["category_id", 2], ["created_at", "2020-09-30 14:40:11.989894"], ["updated_at", "2020-09-30 14:40:11.989894"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSetting Load (0.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.3ms)[0m  [1m[32mINSERT INTO "locations" ("borough", "name", "address", "contact_name", "contact_phone", "image_url", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["borough", "Bronx"], ["name", "Glacken's Bar & Grill"], ["address", "135 E 149th St, The Bronx, NY 10451"], ["contact_name", "The Hon. Meridith Wolff"], ["contact_phone", "7185857082"], ["image_url", "https://www.nydailynews.com/resizer/zdGrm0lRIqxj4dtSJ2U_PHuGmDk=/1200x1805/top/arc-anglerfish-arc2-prod-tronc.s3.amazonaws.com/public/PTGULKFSYEDF46KHQPCBG6WRZA.jpg"], ["category_id", 2], ["created_at", "2020-09-30 14:40:11.994896"], ["updated_at", "2020-09-30 14:40:11.994896"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSetting Load (0.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("borough", "name", "address", "contact_name", "contact_phone", "image_url", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["borough", "Staten Island"], ["name", "Trackside Bar & Grill"], ["address", "61 New Dorp Plaza, Staten Island, NY 10306"], ["contact_name", "Patience Franecki"], ["contact_phone", "7189876100"], ["image_url", "https://static.wixstatic.com/media/84a89f_ff7fd9ee35b840dfaf58864451b68084~mv2.png/v1/fill/w_640,h_486,al_c,q_85,usm_0.66_1.00_0.01/84a89f_ff7fd9ee35b840dfaf58864451b68084~mv2.webp"], ["category_id", 2], ["created_at", "2020-09-30 14:40:11.999876"], ["updated_at", "2020-09-30 14:40:11.999876"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("borough", "name", "address", "contact_name", "contact_phone", "image_url", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["borough", "Manhattan"], ["name", "NewYork-Presbyterian Lower Manhattan Hospital"], ["address", "170 William St, New York, NY 10038"], ["contact_name", "Latarsha King"], ["contact_phone", "2123125000"], ["image_url", "https://www.downtownmagazinenyc.com/wp-content/uploads/2014/07/presbyterian-e1405625421304.jpg"], ["category_id", 3], ["created_at", "2020-09-30 14:40:12.004545"], ["updated_at", "2020-09-30 14:40:12.004545"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSetting Load (0.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.3ms)[0m  [1m[32mINSERT INTO "locations" ("borough", "name", "address", "contact_name", "contact_phone", "image_url", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["borough", "Queens"], ["name", "NewYork-Presbyterian Queens Hospital"], ["address", "56-45 Main St, Queens, NY 11355"], ["contact_name", "Kaleigh Gerhold V"], ["contact_phone", "7186702000"], ["image_url", "https://surgery.weill.cornell.edu/sites/default/files/styles/panopoly_image_original/public/nypq-banner.jpg?itok=qJtU4Kal"], ["category_id", 3], ["created_at", "2020-09-30 14:40:12.009030"], ["updated_at", "2020-09-30 14:40:12.009030"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSetting Load (0.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("borough", "name", "address", "contact_name", "contact_phone", "image_url", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["borough", "Brooklyn"], ["name", "The Brooklyn Hospital Center"], ["address", "121 Dekalb Ave, Brooklyn, NY 11201"], ["contact_name", "Brenton Schiller"], ["contact_phone", "7182508000"], ["image_url", "https://upload.wikimedia.org/wikipedia/commons/3/3c/Brookyn_Hospital_Center_jeh.JPG"], ["category_id", 3], ["created_at", "2020-09-30 14:40:12.013627"], ["updated_at", "2020-09-30 14:40:12.013627"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSetting Load (0.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("borough", "name", "address", "contact_name", "contact_phone", "image_url", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["borough", "Bronx"], ["name", "NYC Health + Hospitals/North Central Brono"], ["address", "3424 Kossuth Ave, The Bronx, NY 10467"], ["contact_name", "Trinidad Dare"], ["contact_phone", "7185195000"], ["image_url", "https://3chup2auj4q45vvmk16av4j4-wpengine.netdna-ssl.com/wp-content/uploads/2017/10/North-Central-Bronx.jpg"], ["category_id", 3], ["created_at", "2020-09-30 14:40:12.018098"], ["updated_at", "2020-09-30 14:40:12.018098"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSetting Load (0.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mLocation Create (16.0ms)[0m  [1m[32mINSERT INTO "locations" ("borough", "name", "address", "contact_name", "contact_phone", "image_url", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["borough", "Staten Island"], ["name", "Staten Island University Hospital South Campus"], ["address", "375 Seguine Ave, Staten Island, NY 10309"], ["contact_name", "Donya Schimmel"], ["contact_phone", "7182262000"], ["image_url", "https://dam.northwell.edu/m/7494fa4c1fe9a6f7/Drupal-WEB_SIUH_Heart_HeartTowerExterior.jpg"], ["category_id", 3], ["created_at", "2020-09-30 14:40:12.022655"], ["updated_at", "2020-09-30 14:40:12.022655"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSetting Load (0.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("borough", "name", "address", "contact_name", "contact_phone", "image_url", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["borough", "Manhattan"], ["name", "Manhatta"], ["address", "28 Liberty St 60th floor, New York, NY 10005"], ["contact_name", "Odell Schultz"], ["contact_phone", "2122305788"], ["image_url", "https://cdn.vox-cdn.com/thumbor/MMxQONw2dQeTrnc-YjTeuPYN6Q4=/1400x0/filters:no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/13156669/20180920_GH_MANHATTA_1018.jpg"], ["category_id", 4], ["created_at", "2020-09-30 14:40:12.043639"], ["updated_at", "2020-09-30 14:40:12.043639"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSetting Load (0.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("borough", "name", "address", "contact_name", "contact_phone", "image_url", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["borough", "Queens"], ["name", "Mama's Empanadas"], ["address", "9120 59th Ave, Elmhurst, NY 11373"], ["contact_name", "Vincenzo Braun"], ["contact_phone", "7184292502"], ["image_url", "https://media-cdn.tripadvisor.com/media/photo-s/0b/5c/61/f7/20160522-145436-1-largejpg.jpg"], ["category_id", 4], ["created_at", "2020-09-30 14:40:12.048123"], ["updated_at", "2020-09-30 14:40:12.048123"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSetting Load (0.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.5ms)[0m  [1m[32mINSERT INTO "locations" ("borough", "name", "address", "contact_name", "contact_phone", "image_url", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["borough", "Brooklyn"], ["name", "Olmsted"], ["address", "659 Vanderbilt Ave, Brooklyn, NY 11238"], ["contact_name", "Cary Turner"], ["contact_phone", "7185522610"], ["image_url", "https://cdn.vox-cdn.com/thumbor/gZJzmKbIQxeAMX4NQfiIBGm69qk=/0x0:2400x1597/1200x800/filters:focal(1008x607:1392x991)/cdn.vox-cdn.com/uploads/chorus_image/image/49682787/Olmsted_20interior_20copy.0.jpg"], ["category_id", 4], ["created_at", "2020-09-30 14:40:12.052457"], ["updated_at", "2020-09-30 14:40:12.052457"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("borough", "name", "address", "contact_name", "contact_phone", "image_url", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["borough", "Bronx"], ["name", "Next Stop Vegan"], ["address", "1818 Archer St, The Bronx, NY 10460"], ["contact_name", "Carrol Bayer PhD"], ["contact_phone", "3473988166"], ["image_url", "https://cdn.nextstopvegan.com/wp-content/uploads/2019/05/Next-Stop-Vegan-1024x671.jpg"], ["category_id", 4], ["created_at", "2020-09-30 14:40:12.057421"], ["updated_at", "2020-09-30 14:40:12.057421"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSetting Load (0.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("borough", "name", "address", "contact_name", "contact_phone", "image_url", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["borough", "Staten Island"], ["name", "Enoteca Maria"], ["address", "27 Hyatt St, Staten Island, NY 10301"], ["contact_name", "Madeleine Konopelski"], ["contact_phone", "7184472777"], ["image_url", "https://img2.10bestmedia.com/Images/Photos/341382/4775-198232905550-7694808-n_55_660x440.jpg"], ["category_id", 4], ["created_at", "2020-09-30 14:40:12.062023"], ["updated_at", "2020-09-30 14:40:12.062023"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("borough", "name", "address", "contact_name", "contact_phone", "image_url", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["borough", "Manhattan"], ["name", "AMC Lincoln Square 13"], ["address", "1998 Broadway, New York, NY 10023"], ["contact_name", "Susy Herzog III"], ["contact_phone", "2123365020"], ["image_url", "https://photos.cinematreasures.org/production/photos/40/1305945928/large.jpg?1305945928"], ["category_id", 5], ["created_at", "2020-09-30 14:40:12.066518"], ["updated_at", "2020-09-30 14:40:12.066518"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("borough", "name", "address", "contact_name", "contact_phone", "image_url", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["borough", "Queens"], ["name", "College Point Multiplex Cinemas"], ["address", "2855 Ulmer St, Queens, NY 11357"], ["contact_name", "Miss Jacinto Herman"], ["contact_phone", "8003154000"], ["image_url", "https://lh5.googleusercontent.com/p/AF1QipN790gUBhPYu5qleE1qmWQif0Uq9bIDGuW8eOmZ"], ["category_id", 5], ["created_at", "2020-09-30 14:40:12.071045"], ["updated_at", "2020-09-30 14:40:12.071045"]]
+  [1m[35m (16.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("borough", "name", "address", "contact_name", "contact_phone", "image_url", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["borough", "Brooklyn"], ["name", "Alamo Drafthouse Cinema Downtown Brooklyn"], ["address", "445 Albee Square W 4th floor, Brooklyn, NY 11201"], ["contact_name", "Msgr. Earline White"], ["contact_phone", "7185132547"], ["image_url", "https://s3-media0.fl.yelpcdn.com/bphoto/naNiZaWBBNMyldawm0_OLQ/o.jpg"], ["category_id", 5], ["created_at", "2020-09-30 14:40:12.093893"], ["updated_at", "2020-09-30 14:40:12.093893"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSetting Load (0.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("borough", "name", "address", "contact_name", "contact_phone", "image_url", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["borough", "Bronx"], ["name", "Concourse Plaza Multiplex Cinemas"], ["address", "214 E 161 St, The Bronx, NY 10451"], ["contact_name", "Corey Crist"], ["contact_phone", "8003154000"], ["image_url", "https://www.yonkerstribune.com/wp-content/uploads/2018/08/607C2B85-5B94-40AE-B09A-DBDBC66C1F8D.jpeg"], ["category_id", 5], ["created_at", "2020-09-30 14:40:12.098840"], ["updated_at", "2020-09-30 14:40:12.098840"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSetting Load (0.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.4ms)[0m  [1m[32mINSERT INTO "locations" ("borough", "name", "address", "contact_name", "contact_phone", "image_url", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["borough", "Staten Island"], ["name", "Regal UA Staten Island & RPX"], ["address", "2474 Forest Ave, Staten Island, NY 10303"], ["contact_name", "Dorcas Beahan III"], ["contact_phone", "8444627342"], ["image_url", "https://lh3.googleusercontent.com/proxy/B7eHLCgEKJL9NdQID0rAr3IG_D0iAKsCnI6xN6L7Q-dwZmN4pHIKiL2h_bTlE4p2bemLcUENLfDUktT6CNXm97LkrHatiTuMzueIYaXsHkEjEbdV1S6YppM7QtRaLw9JL4H0"], ["category_id", 5], ["created_at", "2020-09-30 14:40:12.103544"], ["updated_at", "2020-09-30 14:40:12.103544"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m

@@ -1,16 +1,36 @@
 class ScenesController < ApplicationController
      
-# def new
-# end
 
-# def create
-# end
+def create
 
-# def update
-# end
+scene = Scene.new(movie_params)
+     if scene.save
+          render json: scene
+     else
+          render json: {error: scene.errors.full_messages}
+     end
 
-# def destroy
-# end
+end
+
+def update
+     scene = Scene.find(params[:id])
+
+     scene.update!(scene_params)
+     
+     render json: movie
+end
+
+def destroy
+     scene = Scene.find(params[:id])
+     scene.destroy 
+end
+
+
+private 
+
+def scene_params
+     params.require(:scene).permit(:name, :location_id, :setting_id)
+end
 
 
 end

@@ -4,6 +4,7 @@ class CreateScenes < ActiveRecord::Migration[6.0]
       t.string :name
       t.integer :location_id
       t.integer :setting_id
+      t.integer :shoot_id
 
       t.timestamps
     end

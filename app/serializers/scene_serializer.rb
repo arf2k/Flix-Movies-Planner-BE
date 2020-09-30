@@ -1,4 +1,4 @@
-class SceneSerializer
+# class SceneSerializer
 #   include FastJsonapi::ObjectSerializer
 #   attributes :id, :name, :setting, :location
 
