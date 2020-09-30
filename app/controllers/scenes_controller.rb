@@ -3,7 +3,7 @@ class ScenesController < ApplicationController
 
 def create
 
-scene = Scene.new(movie_params)
+scene = Scene.new(scene_params)
      if scene.save
           render json: scene
      else
@@ -29,7 +29,7 @@ end
 private 
 
 def scene_params
-     params.require(:scene).permit(:name, :location_id, :setting_id)
+     params.require(:scene).permit(:name, :location_id, :setting_id, shoot_id)
 end
 
 
