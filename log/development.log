@@ -18060,3 +18060,1186 @@ Processing by ScenesController#index as HTML
 Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 1351)
 
 
+Started GET "/locations?setting=undefined" for ::1 at 2020-10-01 07:25:23 -0400
+Started GET "/settings/" for ::1 at 2020-10-01 07:25:23 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SettingsController#index as */*
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mSetting Load (8.8ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+  [1m[36mLocation Load (4.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 26ms (Views: 6.5ms | ActiveRecord: 13.8ms | Allocations: 10660)
+
+
+Completed 200 OK in 27ms (Views: 0.1ms | ActiveRecord: 13.3ms | Allocations: 14661)
+
+
+Started GET "/locations?setting=3" for ::1 at 2020-10-01 07:25:32 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"3"}
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 2168)
+
+
+Started POST "/shoots/" for ::1 at 2020-10-01 07:25:40 -0400
+Processing by ShootsController#create as JSON
+  Parameters: {"title"=>"Avengers", "date"=>"2020-10-03", "scenes"=>[{"name"=>"Superhero Party", "setting_id"=>"3", "location_id"=>"20"}], "shoot"=>{"date"=>"2020-10-03", "title"=>"Avengers"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[36mShoot Create (2.2ms)[0m  [1m[32mINSERT INTO "shoots" ("date", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["date", "2020-10-03"], ["title", "Avengers"], ["created_at", "2020-10-01 11:25:40.160965"], ["updated_at", "2020-10-01 11:25:40.160965"]]
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mSetting Load (0.4ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mShoot Load (0.9ms)[0m  [1m[34mSELECT "shoots".* FROM "shoots" WHERE "shoots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mScene Create (0.7ms)[0m  [1m[32mINSERT INTO "scenes" ("name", "location_id", "setting_id", "shoot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Superhero Party"], ["location_id", 20], ["setting_id", 3], ["shoot_id", 9], ["created_at", "2020-10-01 11:25:40.192260"], ["updated_at", "2020-10-01 11:25:40.192260"]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."shoot_id" = $1[0m  [["shoot_id", 9]]
+  ↳ app/controllers/shoots_controller.rb:30:in `create'
+Completed 200 OK in 45ms (Views: 4.4ms | ActiveRecord: 10.9ms | Allocations: 21337)
+
+
+  [1m[36mShoot Load (0.3ms)[0m  [1m[34mSELECT "shoots".* FROM "shoots" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mShoot Load (0.4ms)[0m  [1m[34mSELECT "shoots".* FROM "shoots" ORDER BY "shoots"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mShoot Destroy (3.6ms)[0m  [1m[31mDELETE FROM "shoots" WHERE "shoots"."id" = $1[0m  [["id", 9]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mShoot Load (0.4ms)[0m  [1m[34mSELECT "shoots".* FROM "shoots" ORDER BY "shoots"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mShoot Destroy (0.3ms)[0m  [1m[31mDELETE FROM "shoots" WHERE "shoots"."id" = $1[0m  [["id", 8]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mShoot Load (0.3ms)[0m  [1m[34mSELECT "shoots".* FROM "shoots" ORDER BY "shoots"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mShoot Destroy (0.2ms)[0m  [1m[31mDELETE FROM "shoots" WHERE "shoots"."id" = $1[0m  [["id", 7]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mShoot Load (0.4ms)[0m  [1m[34mSELECT "shoots".* FROM "shoots" ORDER BY "shoots"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mShoot Destroy (0.3ms)[0m  [1m[31mDELETE FROM "shoots" WHERE "shoots"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mShoot Load (0.3ms)[0m  [1m[34mSELECT "shoots".* FROM "shoots" ORDER BY "shoots"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mShoot Destroy (0.2ms)[0m  [1m[31mDELETE FROM "shoots" WHERE "shoots"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mShoot Load (0.3ms)[0m  [1m[34mSELECT "shoots".* FROM "shoots" ORDER BY "shoots"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mShoot Destroy (0.2ms)[0m  [1m[31mDELETE FROM "shoots" WHERE "shoots"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mShoot Load (0.3ms)[0m  [1m[34mSELECT "shoots".* FROM "shoots" ORDER BY "shoots"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/settings/" for ::1 at 2020-10-01 07:28:06 -0400
+Started GET "/locations?setting=undefined" for ::1 at 2020-10-01 07:28:06 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LocationsController#index as */*
+  [1m[35m (9.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  Parameters: {"setting"=>"undefined"}
+Processing by SettingsController#index as */*
+  [1m[36mLocation Load (2.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+  [1m[36mSetting Load (1.4ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Completed 200 OK in 19ms (Views: 0.1ms | ActiveRecord: 6.0ms | Allocations: 13516)
+
+
+Completed 200 OK in 20ms (Views: 5.2ms | ActiveRecord: 12.0ms | Allocations: 14954)
+
+
+Started GET "/locations?setting=5" for ::1 at 2020-10-01 07:31:04 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"5"}
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.5ms | Allocations: 2186)
+
+
+Started POST "/shoots/" for ::1 at 2020-10-01 07:31:11 -0400
+Processing by ShootsController#create as JSON
+  Parameters: {"title"=>"Avengers", "date"=>"2020-10-03", "scenes"=>[{"name"=>"Birthday", "setting_id"=>"5", "location_id"=>"30"}], "shoot"=>{"date"=>"2020-10-03", "title"=>"Avengers"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[36mShoot Create (0.5ms)[0m  [1m[32mINSERT INTO "shoots" ("date", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["date", "2020-10-03"], ["title", "Avengers"], ["created_at", "2020-10-01 11:31:11.157983"], ["updated_at", "2020-10-01 11:31:11.157983"]]
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mShoot Load (0.3ms)[0m  [1m[34mSELECT "shoots".* FROM "shoots" WHERE "shoots"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mScene Create (0.4ms)[0m  [1m[32mINSERT INTO "scenes" ("name", "location_id", "setting_id", "shoot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Birthday"], ["location_id", 30], ["setting_id", 5], ["shoot_id", 10], ["created_at", "2020-10-01 11:31:11.181379"], ["updated_at", "2020-10-01 11:31:11.181379"]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."shoot_id" = $1[0m  [["shoot_id", 10]]
+  ↳ app/controllers/shoots_controller.rb:30:in `create'
+Completed 200 OK in 35ms (Views: 2.9ms | ActiveRecord: 7.3ms | Allocations: 21317)
+
+
+Started GET "/" for ::1 at 2020-10-01 07:31:23 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/alexforeman/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/alexforeman/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.2ms | Allocations: 315)
+Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 1588)
+
+
+Started GET "/shoots" for ::1 at 2020-10-01 07:31:28 -0400
+Processing by ShootsController#index as HTML
+  [1m[36mShoot Load (0.3ms)[0m  [1m[34mSELECT "shoots".* FROM "shoots"[0m
+  ↳ app/controllers/shoots_controller.rb:6:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."shoot_id" = $1[0m  [["shoot_id", 10]]
+  ↳ app/controllers/shoots_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.5ms | Allocations: 2048)
+
+
+  [1m[36mShoot Load (0.3ms)[0m  [1m[34mSELECT "shoots".* FROM "shoots" ORDER BY "shoots"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mShoot Load (0.5ms)[0m  [1m[34mSELECT "shoots".* FROM "shoots" ORDER BY "shoots"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" WHERE "scenes"."shoot_id" = $1 LIMIT $2[0m  [["shoot_id", 10], ["LIMIT", 11]]
+  [1m[36mShoot Load (0.4ms)[0m  [1m[34mSELECT "shoots".* FROM "shoots" ORDER BY "shoots"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mShoot Load (0.3ms)[0m  [1m[34mSELECT "shoots".* FROM "shoots" ORDER BY "shoots"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mShoot Load (0.3ms)[0m  [1m[34mSELECT "shoots".* FROM "shoots" ORDER BY "shoots"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" WHERE "scenes"."shoot_id" = $1 LIMIT $2[0m  [["shoot_id", 10], ["LIMIT", 11]]
+Started GET "/settings/" for ::1 at 2020-10-01 07:39:22 -0400
+Started GET "/locations?setting=undefined" for ::1 at 2020-10-01 07:39:22 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SettingsController#index as */*
+  [1m[35m (8.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mSetting Load (1.7ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+  [1m[36mLocation Load (0.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 17ms (Views: 8.1ms | ActiveRecord: 5.4ms | Allocations: 11892)
+
+
+Completed 200 OK in 19ms (Views: 0.1ms | ActiveRecord: 7.6ms | Allocations: 14598)
+
+
+Started GET "/locations?setting=2" for ::1 at 2020-10-01 07:39:36 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"2"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 2879)
+
+
+Started POST "/shoots/" for ::1 at 2020-10-01 07:39:44 -0400
+Processing by ShootsController#create as JSON
+  Parameters: {"title"=>"Bad Boys 7", "date"=>"2020-10-03", "scenes"=>[{"name"=>"Drug Bust ", "setting_id"=>"2", "location_id"=>"11"}], "shoot"=>{"date"=>"2020-10-03", "title"=>"Bad Boys 7"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[36mShoot Create (0.5ms)[0m  [1m[32mINSERT INTO "shoots" ("date", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["date", "2020-10-03"], ["title", "Bad Boys 7"], ["created_at", "2020-10-01 11:39:44.866659"], ["updated_at", "2020-10-01 11:39:44.866659"]]
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mLocation Load (0.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mShoot Load (0.2ms)[0m  [1m[34mSELECT "shoots".* FROM "shoots" WHERE "shoots"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mScene Create (0.3ms)[0m  [1m[32mINSERT INTO "scenes" ("name", "location_id", "setting_id", "shoot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Drug Bust "], ["location_id", 11], ["setting_id", 2], ["shoot_id", 11], ["created_at", "2020-10-01 11:39:44.888960"], ["updated_at", "2020-10-01 11:39:44.888960"]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."shoot_id" = $1[0m  [["shoot_id", 11]]
+  ↳ app/controllers/shoots_controller.rb:30:in `create'
+Completed 200 OK in 34ms (Views: 3.1ms | ActiveRecord: 7.0ms | Allocations: 21309)
+
+
+Started GET "/settings/" for ::1 at 2020-10-01 07:42:44 -0400
+Processing by SettingsController#index as */*
+  [1m[36mSetting Load (0.5ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.5ms | Allocations: 1466)
+
+
+Started GET "/locations?setting=undefined" for ::1 at 2020-10-01 07:42:44 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 1267)
+
+
+Started GET "/locations?setting=3" for ::1 at 2020-10-01 07:42:50 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"3"}
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.4ms | Allocations: 2142)
+
+
+Started POST "/shoots/" for ::1 at 2020-10-01 07:42:54 -0400
+Processing by ShootsController#create as JSON
+  Parameters: {"title"=>"Bad Boys 7", "date"=>"2020-10-03", "scenes"=>[{"name"=>"Drug Bust ", "setting_id"=>"3", "location_id"=>"20"}], "shoot"=>{"date"=>"2020-10-03", "title"=>"Bad Boys 7"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[36mShoot Create (1.2ms)[0m  [1m[32mINSERT INTO "shoots" ("date", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["date", "2020-10-03"], ["title", "Bad Boys 7"], ["created_at", "2020-10-01 11:42:54.678369"], ["updated_at", "2020-10-01 11:42:54.678369"]]
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mShoot Load (0.2ms)[0m  [1m[34mSELECT "shoots".* FROM "shoots" WHERE "shoots"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mScene Create (0.2ms)[0m  [1m[32mINSERT INTO "scenes" ("name", "location_id", "setting_id", "shoot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Drug Bust "], ["location_id", 20], ["setting_id", 3], ["shoot_id", 12], ["created_at", "2020-10-01 11:42:54.688024"], ["updated_at", "2020-10-01 11:42:54.688024"]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."shoot_id" = $1[0m  [["shoot_id", 12]]
+  ↳ app/controllers/shoots_controller.rb:30:in `create'
+Completed 200 OK in 14ms (Views: 1.4ms | ActiveRecord: 2.8ms | Allocations: 9372)
+
+
+Started GET "/settings/" for ::1 at 2020-10-01 07:43:45 -0400
+Processing by SettingsController#index as */*
+Started GET "/locations?setting=undefined" for ::1 at 2020-10-01 07:43:45 -0400
+  [1m[36mSetting Load (0.6ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.6ms | Allocations: 1932)
+
+
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mLocation Load (0.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 1282)
+
+
+Started GET "/settings/" for ::1 at 2020-10-01 07:43:50 -0400
+Processing by SettingsController#index as */*
+  [1m[36mSetting Load (1.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+Started GET "/locations?setting=undefined" for ::1 at 2020-10-01 07:43:50 -0400
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 1.1ms | Allocations: 1782)
+
+
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 1267)
+
+
+Started GET "/locations?setting=2" for ::1 at 2020-10-01 07:43:59 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"2"}
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 2853)
+
+
+Started POST "/shoots/" for ::1 at 2020-10-01 07:44:07 -0400
+Processing by ShootsController#create as JSON
+  Parameters: {"title"=>"Bad Boys 7", "date"=>"2020-10-03", "scenes"=>[{"name"=>"Drug Bust ", "setting_id"=>"2", "location_id"=>"11"}], "shoot"=>{"date"=>"2020-10-03", "title"=>"Bad Boys 7"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[36mShoot Create (0.7ms)[0m  [1m[32mINSERT INTO "shoots" ("date", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["date", "2020-10-03"], ["title", "Bad Boys 7"], ["created_at", "2020-10-01 11:44:07.976395"], ["updated_at", "2020-10-01 11:44:07.976395"]]
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mShoot Load (0.3ms)[0m  [1m[34mSELECT "shoots".* FROM "shoots" WHERE "shoots"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mScene Create (0.4ms)[0m  [1m[32mINSERT INTO "scenes" ("name", "location_id", "setting_id", "shoot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Drug Bust "], ["location_id", 11], ["setting_id", 2], ["shoot_id", 13], ["created_at", "2020-10-01 11:44:07.986462"], ["updated_at", "2020-10-01 11:44:07.986462"]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."shoot_id" = $1[0m  [["shoot_id", 13]]
+  ↳ app/controllers/shoots_controller.rb:30:in `create'
+Completed 200 OK in 14ms (Views: 1.4ms | ActiveRecord: 2.9ms | Allocations: 9412)
+
+
+Started GET "/locations?setting=2" for ::1 at 2020-10-01 07:44:18 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"2"}
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 2853)
+
+
+Started GET "/settings/" for ::1 at 2020-10-01 07:56:47 -0400
+Started GET "/locations?setting=undefined" for ::1 at 2020-10-01 07:56:47 -0400
+Processing by SettingsController#index as */*
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mSetting Load (0.7ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.7ms | Allocations: 1627)
+
+
+  [1m[36mLocation Load (2.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 2.1ms | Allocations: 2954)
+
+
+Started GET "/locations?setting=1" for ::1 at 2020-10-01 07:56:50 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"1"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 3019)
+
+
+Started GET "/locations?setting=undefined" for ::1 at 2020-10-01 08:05:57 -0400
+Started GET "/settings/" for ::1 at 2020-10-01 08:05:57 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+Processing by SettingsController#index as */*
+  [1m[36mLocation Load (1.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.9ms | Allocations: 1936)
+
+
+  [1m[36mSetting Load (2.4ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 2.4ms | Allocations: 2958)
+
+
+Started GET "/locations?setting=2" for ::1 at 2020-10-01 08:06:09 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"2"}
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.5ms | Allocations: 2868)
+
+
+Started POST "/shoots/" for ::1 at 2020-10-01 08:06:14 -0400
+Processing by ShootsController#create as JSON
+  Parameters: {"title"=>"Bad Boys 7", "date"=>"2020-10-04", "scenes"=>[{"name"=>"Drug Bust ", "setting_id"=>"2", "location_id"=>"11"}], "shoot"=>{"date"=>"2020-10-04", "title"=>"Bad Boys 7"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[36mShoot Create (0.5ms)[0m  [1m[32mINSERT INTO "shoots" ("date", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["date", "2020-10-04"], ["title", "Bad Boys 7"], ["created_at", "2020-10-01 12:06:14.442056"], ["updated_at", "2020-10-01 12:06:14.442056"]]
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mShoot Load (0.2ms)[0m  [1m[34mSELECT "shoots".* FROM "shoots" WHERE "shoots"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mScene Create (0.3ms)[0m  [1m[32mINSERT INTO "scenes" ("name", "location_id", "setting_id", "shoot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Drug Bust "], ["location_id", 11], ["setting_id", 2], ["shoot_id", 14], ["created_at", "2020-10-01 12:06:14.451108"], ["updated_at", "2020-10-01 12:06:14.451108"]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."shoot_id" = $1[0m  [["shoot_id", 14]]
+  ↳ app/controllers/shoots_controller.rb:30:in `create'
+Completed 200 OK in 13ms (Views: 1.3ms | ActiveRecord: 2.6ms | Allocations: 9412)
+
+
+Started GET "/settings/" for ::1 at 2020-10-01 08:07:09 -0400
+Started GET "/locations?setting=undefined" for ::1 at 2020-10-01 08:07:09 -0400
+Processing by SettingsController#index as */*
+Processing by LocationsController#index as */*
+  [1m[36mSetting Load (0.4ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  Parameters: {"setting"=>"undefined"}
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms | Allocations: 1786)
+
+
+  [1m[36mLocation Load (1.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.2ms | Allocations: 2172)
+
+
+Started GET "/locations?setting=3" for ::1 at 2020-10-01 08:07:20 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"3"}
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 2142)
+
+
+Started POST "/shoots/" for ::1 at 2020-10-01 08:07:23 -0400
+Processing by ShootsController#create as JSON
+  Parameters: {"title"=>"Avengers", "date"=>"2020-10-13", "scenes"=>[{"name"=>"Superhero Party", "setting_id"=>"3", "location_id"=>"20"}], "shoot"=>{"date"=>"2020-10-13", "title"=>"Avengers"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[36mShoot Create (0.6ms)[0m  [1m[32mINSERT INTO "shoots" ("date", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["date", "2020-10-13"], ["title", "Avengers"], ["created_at", "2020-10-01 12:07:23.544187"], ["updated_at", "2020-10-01 12:07:23.544187"]]
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mLocation Load (0.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mShoot Load (0.2ms)[0m  [1m[34mSELECT "shoots".* FROM "shoots" WHERE "shoots"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mScene Create (0.4ms)[0m  [1m[32mINSERT INTO "scenes" ("name", "location_id", "setting_id", "shoot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Superhero Party"], ["location_id", 20], ["setting_id", 3], ["shoot_id", 15], ["created_at", "2020-10-01 12:07:23.552891"], ["updated_at", "2020-10-01 12:07:23.552891"]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."shoot_id" = $1[0m  [["shoot_id", 15]]
+  ↳ app/controllers/shoots_controller.rb:30:in `create'
+Completed 200 OK in 13ms (Views: 1.3ms | ActiveRecord: 2.7ms | Allocations: 9412)
+
+
+Started GET "/settings/" for ::1 at 2020-10-01 08:08:41 -0400
+Started GET "/locations?setting=undefined" for ::1 at 2020-10-01 08:08:41 -0400
+Processing by LocationsController#index as */*
+Processing by SettingsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mSetting Load (0.5ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.5ms | Allocations: 2040)
+
+
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 2630)
+
+
+Started GET "/settings/" for ::1 at 2020-10-01 08:08:58 -0400
+Started GET "/locations?setting=undefined" for ::1 at 2020-10-01 08:08:58 -0400
+Processing by SettingsController#index as */*
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mSetting Load (0.6ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.6ms | Allocations: 1565)
+
+
+  [1m[36mLocation Load (1.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 1.7ms | Allocations: 2825)
+
+
+Started GET "/locations?setting=3" for ::1 at 2020-10-01 08:09:09 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"3"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 2142)
+
+
+Started POST "/shoots/" for ::1 at 2020-10-01 08:09:15 -0400
+Processing by ShootsController#create as JSON
+  Parameters: {"title"=>"Hot Fuzz", "date"=>"2020-10-14", "scenes"=>[{"name"=>"Birthday", "setting_id"=>"3", "location_id"=>"20"}], "shoot"=>{"date"=>"2020-10-14", "title"=>"Hot Fuzz"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[36mShoot Create (0.3ms)[0m  [1m[32mINSERT INTO "shoots" ("date", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["date", "2020-10-14"], ["title", "Hot Fuzz"], ["created_at", "2020-10-01 12:09:15.958358"], ["updated_at", "2020-10-01 12:09:15.958358"]]
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mShoot Load (0.1ms)[0m  [1m[34mSELECT "shoots".* FROM "shoots" WHERE "shoots"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mScene Create (0.3ms)[0m  [1m[32mINSERT INTO "scenes" ("name", "location_id", "setting_id", "shoot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Birthday"], ["location_id", 20], ["setting_id", 3], ["shoot_id", 16], ["created_at", "2020-10-01 12:09:15.966734"], ["updated_at", "2020-10-01 12:09:15.966734"]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."shoot_id" = $1[0m  [["shoot_id", 16]]
+  ↳ app/controllers/shoots_controller.rb:30:in `create'
+Completed 200 OK in 12ms (Views: 1.2ms | ActiveRecord: 1.9ms | Allocations: 9368)
+
+
+Started GET "/scenes" for ::1 at 2020-10-01 08:10:42 -0400
+Processing by ScenesController#index as HTML
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes"[0m
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.3ms | Allocations: 2352)
+
+
+Started GET "/settings/" for ::1 at 2020-10-01 08:15:36 -0400
+Started GET "/locations?setting=undefined" for ::1 at 2020-10-01 08:15:36 -0400
+Processing by SettingsController#index as */*
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.2ms | Allocations: 1441)
+
+
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 1340)
+
+
+Started GET "/locations?setting=4" for ::1 at 2020-10-01 08:15:46 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"4"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.3ms | Allocations: 2132)
+
+
+Started GET "/locations?setting=4" for ::1 at 2020-10-01 08:15:46 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"4"}
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.4ms | Allocations: 2132)
+
+
+Started POST "/shoots/" for ::1 at 2020-10-01 08:15:50 -0400
+Processing by ShootsController#create as JSON
+  Parameters: {"title"=>"Hot Fuzz", "date"=>"2020-10-12", "scenes"=>[{"name"=>"Drug Bust ", "setting_id"=>"4", "location_id"=>"25"}], "shoot"=>{"date"=>"2020-10-12", "title"=>"Hot Fuzz"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[36mShoot Create (0.6ms)[0m  [1m[32mINSERT INTO "shoots" ("date", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["date", "2020-10-12"], ["title", "Hot Fuzz"], ["created_at", "2020-10-01 12:15:50.996818"], ["updated_at", "2020-10-01 12:15:50.996818"]]
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mLocation Load (0.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mShoot Load (0.2ms)[0m  [1m[34mSELECT "shoots".* FROM "shoots" WHERE "shoots"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mScene Create (0.3ms)[0m  [1m[32mINSERT INTO "scenes" ("name", "location_id", "setting_id", "shoot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Drug Bust "], ["location_id", 25], ["setting_id", 4], ["shoot_id", 17], ["created_at", "2020-10-01 12:15:51.005395"], ["updated_at", "2020-10-01 12:15:51.005395"]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."shoot_id" = $1[0m  [["shoot_id", 17]]
+  ↳ app/controllers/shoots_controller.rb:30:in `create'
+Completed 200 OK in 17ms (Views: 1.4ms | ActiveRecord: 7.1ms | Allocations: 9406)
+
+
+Started GET "/settings/" for ::1 at 2020-10-01 08:16:15 -0400
+Started GET "/locations?setting=undefined" for ::1 at 2020-10-01 08:16:15 -0400
+Processing by SettingsController#index as */*
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mSetting Load (1.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 1.3ms | Allocations: 1923)
+
+
+  [1m[36mLocation Load (1.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.7ms | Allocations: 2825)
+
+
+Started GET "/locations?setting=5" for ::1 at 2020-10-01 08:16:24 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"5"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 2145)
+
+
+Started POST "/shoots/" for ::1 at 2020-10-01 08:16:28 -0400
+Processing by ShootsController#create as JSON
+  Parameters: {"title"=>"Hot Fuzz", "date"=>"2020-10-12", "scenes"=>[{"name"=>"First Date", "setting_id"=>"5", "location_id"=>"30"}], "shoot"=>{"date"=>"2020-10-12", "title"=>"Hot Fuzz"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[36mShoot Create (0.3ms)[0m  [1m[32mINSERT INTO "shoots" ("date", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["date", "2020-10-12"], ["title", "Hot Fuzz"], ["created_at", "2020-10-01 12:16:28.674985"], ["updated_at", "2020-10-01 12:16:28.674985"]]
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mLocation Load (0.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mShoot Load (0.2ms)[0m  [1m[34mSELECT "shoots".* FROM "shoots" WHERE "shoots"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mScene Create (0.2ms)[0m  [1m[32mINSERT INTO "scenes" ("name", "location_id", "setting_id", "shoot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "First Date"], ["location_id", 30], ["setting_id", 5], ["shoot_id", 18], ["created_at", "2020-10-01 12:16:28.683029"], ["updated_at", "2020-10-01 12:16:28.683029"]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."shoot_id" = $1[0m  [["shoot_id", 18]]
+  ↳ app/controllers/shoots_controller.rb:30:in `create'
+Completed 200 OK in 12ms (Views: 1.3ms | ActiveRecord: 1.9ms | Allocations: 9369)
+
+
+Started GET "/settings/" for ::1 at 2020-10-01 08:19:06 -0400
+Started GET "/locations?setting=undefined" for ::1 at 2020-10-01 08:19:06 -0400
+Processing by SettingsController#index as */*
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mSetting Load (0.5ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.5ms | Allocations: 1583)
+
+
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 2825)
+
+
+Started GET "/locations?setting=3" for ::1 at 2020-10-01 08:19:13 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"3"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 2142)
+
+
+Started POST "/shoots/" for ::1 at 2020-10-01 08:19:19 -0400
+Processing by ShootsController#create as JSON
+  Parameters: {"title"=>"Bad Boys 7", "date"=>"2020-10-12", "scenes"=>[{"name"=>"Drug Bust ", "setting_id"=>"3", "location_id"=>"20"}], "shoot"=>{"date"=>"2020-10-12", "title"=>"Bad Boys 7"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[36mShoot Create (0.3ms)[0m  [1m[32mINSERT INTO "shoots" ("date", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["date", "2020-10-12"], ["title", "Bad Boys 7"], ["created_at", "2020-10-01 12:19:19.267432"], ["updated_at", "2020-10-01 12:19:19.267432"]]
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mShoot Load (0.1ms)[0m  [1m[34mSELECT "shoots".* FROM "shoots" WHERE "shoots"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mScene Create (0.2ms)[0m  [1m[32mINSERT INTO "scenes" ("name", "location_id", "setting_id", "shoot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Drug Bust "], ["location_id", 20], ["setting_id", 3], ["shoot_id", 19], ["created_at", "2020-10-01 12:19:19.275939"], ["updated_at", "2020-10-01 12:19:19.275939"]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."shoot_id" = $1[0m  [["shoot_id", 19]]
+  ↳ app/controllers/shoots_controller.rb:30:in `create'
+Completed 200 OK in 17ms (Views: 1.4ms | ActiveRecord: 6.6ms | Allocations: 9368)
+
+
+Started GET "/settings/" for ::1 at 2020-10-01 08:22:36 -0400
+Started GET "/locations?setting=undefined" for ::1 at 2020-10-01 08:22:36 -0400
+Processing by SettingsController#index as */*
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mSetting Load (1.8ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+  [1m[36mLocation Load (2.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 1.8ms | Allocations: 1583)
+
+
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 2.1ms | Allocations: 2825)
+
+
+Started GET "/locations?setting=4" for ::1 at 2020-10-01 08:22:53 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"4"}
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 2132)
+
+
+Started POST "/shoots/" for ::1 at 2020-10-01 08:23:00 -0400
+Processing by ShootsController#create as JSON
+  Parameters: {"title"=>"Bad Boys 7", "date"=>"2020-10-18", "scenes"=>[{"name"=>"First Date", "setting_id"=>"4", "location_id"=>"25"}], "shoot"=>{"date"=>"2020-10-18", "title"=>"Bad Boys 7"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[36mShoot Create (0.2ms)[0m  [1m[32mINSERT INTO "shoots" ("date", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["date", "2020-10-18"], ["title", "Bad Boys 7"], ["created_at", "2020-10-01 12:23:00.038885"], ["updated_at", "2020-10-01 12:23:00.038885"]]
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mShoot Load (0.1ms)[0m  [1m[34mSELECT "shoots".* FROM "shoots" WHERE "shoots"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mScene Create (0.2ms)[0m  [1m[32mINSERT INTO "scenes" ("name", "location_id", "setting_id", "shoot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "First Date"], ["location_id", 25], ["setting_id", 4], ["shoot_id", 20], ["created_at", "2020-10-01 12:23:00.047474"], ["updated_at", "2020-10-01 12:23:00.047474"]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."shoot_id" = $1[0m  [["shoot_id", 20]]
+  ↳ app/controllers/shoots_controller.rb:30:in `create'
+Completed 200 OK in 17ms (Views: 1.3ms | ActiveRecord: 6.3ms | Allocations: 9369)
+
+
+Started GET "/settings/" for ::1 at 2020-10-01 08:24:11 -0400
+Processing by SettingsController#index as */*
+Started GET "/locations?setting=undefined" for ::1 at 2020-10-01 08:24:11 -0400
+  [1m[36mSetting Load (1.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 1.1ms | Allocations: 1790)
+
+
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1267)
+
+
+Started GET "/locations?setting=3" for ::1 at 2020-10-01 08:24:18 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"3"}
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.4ms | Allocations: 2142)
+
+
+Started POST "/shoots/" for ::1 at 2020-10-01 08:24:22 -0400
+Processing by ShootsController#create as JSON
+  Parameters: {"title"=>"Bad Boys 7", "date"=>"2020-10-19", "scenes"=>[{"name"=>"First Date", "setting_id"=>"3", "location_id"=>"20"}], "shoot"=>{"date"=>"2020-10-19", "title"=>"Bad Boys 7"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[36mShoot Create (0.3ms)[0m  [1m[32mINSERT INTO "shoots" ("date", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["date", "2020-10-19"], ["title", "Bad Boys 7"], ["created_at", "2020-10-01 12:24:22.257488"], ["updated_at", "2020-10-01 12:24:22.257488"]]
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mShoot Load (0.2ms)[0m  [1m[34mSELECT "shoots".* FROM "shoots" WHERE "shoots"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mScene Create (0.3ms)[0m  [1m[32mINSERT INTO "scenes" ("name", "location_id", "setting_id", "shoot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "First Date"], ["location_id", 20], ["setting_id", 3], ["shoot_id", 21], ["created_at", "2020-10-01 12:24:22.277551"], ["updated_at", "2020-10-01 12:24:22.277551"]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."shoot_id" = $1[0m  [["shoot_id", 21]]
+  ↳ app/controllers/shoots_controller.rb:30:in `create'
+Completed 200 OK in 28ms (Views: 1.5ms | ActiveRecord: 5.8ms | Allocations: 9373)
+
+
+Started GET "/settings/" for ::1 at 2020-10-01 08:24:40 -0400
+Started GET "/locations?setting=undefined" for ::1 at 2020-10-01 08:24:40 -0400
+Processing by SettingsController#index as */*
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mSetting Load (0.5ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.5ms | Allocations: 1565)
+
+
+  [1m[36mLocation Load (2.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 2.2ms | Allocations: 2825)
+
+
+Started GET "/locations?setting=3" for ::1 at 2020-10-01 08:24:56 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"3"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 2142)
+
+
+Started POST "/shoots/" for ::1 at 2020-10-01 08:24:59 -0400
+Processing by ShootsController#create as JSON
+  Parameters: {"title"=>"Bad Boys 7", "date"=>"2020-10-25", "scenes"=>[{"name"=>"Birthday", "setting_id"=>"3", "location_id"=>"20"}], "shoot"=>{"date"=>"2020-10-25", "title"=>"Bad Boys 7"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[36mShoot Create (0.3ms)[0m  [1m[32mINSERT INTO "shoots" ("date", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["date", "2020-10-25"], ["title", "Bad Boys 7"], ["created_at", "2020-10-01 12:24:59.584571"], ["updated_at", "2020-10-01 12:24:59.584571"]]
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mShoot Load (0.2ms)[0m  [1m[34mSELECT "shoots".* FROM "shoots" WHERE "shoots"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mScene Create (0.2ms)[0m  [1m[32mINSERT INTO "scenes" ("name", "location_id", "setting_id", "shoot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Birthday"], ["location_id", 20], ["setting_id", 3], ["shoot_id", 22], ["created_at", "2020-10-01 12:24:59.593094"], ["updated_at", "2020-10-01 12:24:59.593094"]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."shoot_id" = $1[0m  [["shoot_id", 22]]
+  ↳ app/controllers/shoots_controller.rb:30:in `create'
+Completed 200 OK in 17ms (Views: 1.4ms | ActiveRecord: 5.8ms | Allocations: 9369)
+
+
+Started GET "/settings/" for ::1 at 2020-10-01 08:26:20 -0400
+Started GET "/locations?setting=undefined" for ::1 at 2020-10-01 08:26:20 -0400
+Processing by SettingsController#index as */*
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mSetting Load (1.6ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 1.6ms | Allocations: 1924)
+
+
+  [1m[36mLocation Load (2.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 2.0ms | Allocations: 2804)
+
+
+Started GET "/locations?setting=undefined" for ::1 at 2020-10-01 08:29:25 -0400
+Started GET "/settings/" for ::1 at 2020-10-01 08:29:25 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SettingsController#index as */*
+  [1m[35m (9.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mSetting Load (2.5ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+  [1m[36mLocation Load (0.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 30ms (Views: 10.3ms | ActiveRecord: 14.8ms | Allocations: 11889)
+
+
+Completed 200 OK in 38ms (Views: 0.1ms | ActiveRecord: 17.1ms | Allocations: 14489)
+
+
+Started GET "/settings/" for ::1 at 2020-10-01 08:29:28 -0400
+Started GET "/locations?setting=undefined" for ::1 at 2020-10-01 08:29:28 -0400
+Processing by LocationsController#index as */*
+Processing by SettingsController#index as */*
+  Parameters: {"setting"=>"undefined"}
+  [1m[36mSetting Load (0.5ms)[0m  [1m[34mSELECT "settings".* FROM "settings"[0m
+  ↳ app/controllers/settings_controller.rb:10:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.5ms | Allocations: 1584)
+
+
+  [1m[36mLocation Load (1.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.7ms | Allocations: 2863)
+
+
+Started GET "/locations?setting=2" for ::1 at 2020-10-01 08:29:39 -0400
+Processing by LocationsController#index as */*
+  Parameters: {"setting"=>"2"}
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:9:in `filter'
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 2879)
+
+
+Started POST "/shoots/" for ::1 at 2020-10-01 08:29:42 -0400
+Processing by ShootsController#create as JSON
+  Parameters: {"title"=>"Bad Boys 7", "date"=>"2020-10-19", "scenes"=>[{"name"=>"Birthday", "setting_id"=>"2", "location_id"=>"11"}], "shoot"=>{"date"=>"2020-10-19", "title"=>"Bad Boys 7"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[36mShoot Create (0.5ms)[0m  [1m[32mINSERT INTO "shoots" ("date", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["date", "2020-10-19"], ["title", "Bad Boys 7"], ["created_at", "2020-10-01 12:29:42.776915"], ["updated_at", "2020-10-01 12:29:42.776915"]]
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shoots_controller.rb:21:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mShoot Load (0.3ms)[0m  [1m[34mSELECT "shoots".* FROM "shoots" WHERE "shoots"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[36mScene Create (0.4ms)[0m  [1m[32mINSERT INTO "scenes" ("name", "location_id", "setting_id", "shoot_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Birthday"], ["location_id", 11], ["setting_id", 2], ["shoot_id", 23], ["created_at", "2020-10-01 12:29:42.800490"], ["updated_at", "2020-10-01 12:29:42.800490"]]
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shoots_controller.rb:26:in `block in create'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."shoot_id" = $1[0m  [["shoot_id", 23]]
+  ↳ app/controllers/shoots_controller.rb:30:in `create'
+Completed 200 OK in 36ms (Views: 3.1ms | ActiveRecord: 7.9ms | Allocations: 21330)
+
+
+  [1m[36mShoot Load (0.3ms)[0m  [1m[34mSELECT "shoots".* FROM "shoots" ORDER BY "shoots"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" WHERE "scenes"."shoot_id" = $1 LIMIT $2[0m  [["shoot_id", 23], ["LIMIT", 11]]
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mScene Load (0.4ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mScene Load (0.4ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes" ORDER BY "scenes"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+Started GET "/scenes" for ::1 at 2020-10-01 08:37:05 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ScenesController#index as HTML
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 0.0ms | Allocations: 34116)
+
+
+  
+NoMethodError (undefined method `ender' for #<ScenesController:0x00007fa3d8d6c648>
+Did you mean?  render
+               end):
+  
+app/controllers/scenes_controller.rb:6:in `index'
+Started GET "/" for ::1 at 2020-10-01 08:37:07 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/alexforeman/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/alexforeman/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.2ms | Allocations: 196)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 868)
+
+
+Started GET "/scenes" for ::1 at 2020-10-01 08:37:14 -0400
+Processing by ScenesController#index as HTML
+Completed 500 Internal Server Error in 77ms (ActiveRecord: 0.0ms | Allocations: 32469)
+
+
+  
+NoMethodError (undefined method `ender' for #<ScenesController:0x00007fa3e1045038>
+Did you mean?  render
+               end):
+  
+app/controllers/scenes_controller.rb:6:in `index'
+Started GET "/scenes" for ::1 at 2020-10-01 08:37:37 -0400
+Processing by ScenesController#index as HTML
+  [1m[36mScene Load (0.5ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes"[0m
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 9.6ms | Allocations: 26308)
+
+
+  
+NoMethodError (undefined method `scene' for #<Scene:0x00007fa3d8c9d9b0>):
+  
+app/controllers/scenes_controller.rb:6:in `index'
+Started GET "/scenes" for ::1 at 2020-10-01 08:37:38 -0400
+Processing by ScenesController#index as HTML
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes"[0m
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.7ms | Allocations: 4694)
+
+
+  
+NoMethodError (undefined method `scene' for #<Scene:0x00007fa3d8991190>):
+  
+app/controllers/scenes_controller.rb:6:in `index'
+Started GET "/scenes" for ::1 at 2020-10-01 08:38:34 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ScenesController#index as HTML
+  [1m[36mScene Load (0.5ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes"[0m
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 8.8ms | Allocations: 26544)
+
+
+  
+NoMethodError (undefined method `scene' for #<Scene:0x00007f9a7ead87f0>):
+  
+app/controllers/scenes_controller.rb:6:in `index'
+Started GET "/scenes" for ::1 at 2020-10-01 08:38:36 -0400
+Processing by ScenesController#index as HTML
+  [1m[36mScene Load (0.2ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes"[0m
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.6ms | Allocations: 4763)
+
+
+  
+NoMethodError (undefined method `scene' for #<Scene:0x00007f9a7eb81008>):
+  
+app/controllers/scenes_controller.rb:6:in `index'
+Started GET "/scenes" for ::1 at 2020-10-01 08:38:37 -0400
+Processing by ScenesController#index as HTML
+  [1m[36mScene Load (0.4ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes"[0m
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.8ms | Allocations: 4700)
+
+
+  
+NoMethodError (undefined method `scene' for #<Scene:0x00007f9a7b5a84b8>):
+  
+app/controllers/scenes_controller.rb:6:in `index'
+Started GET "/scenes" for ::1 at 2020-10-01 08:40:41 -0400
+Processing by ScenesController#index as HTML
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes"[0m
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 7.3ms | Allocations: 23788)
+
+
+  
+NoMethodError (undefined method `scene_ids' for #<Scene:0x00007f9a7b36cb90>):
+  
+app/controllers/scenes_controller.rb:6:in `index'
+Started GET "/scenes" for ::1 at 2020-10-01 08:40:42 -0400
+Processing by ScenesController#index as HTML
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes"[0m
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.7ms | Allocations: 4680)
+
+
+  
+NoMethodError (undefined method `scene_ids' for #<Scene:0x00007f9a7b525270>):
+  
+app/controllers/scenes_controller.rb:6:in `index'
+Started GET "/scenes" for ::1 at 2020-10-01 08:42:21 -0400
+Processing by ScenesController#index as HTML
+  [1m[36mScene Load (0.3ms)[0m  [1m[34mSELECT "scenes".* FROM "scenes"[0m
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mSetting Load (0.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mSetting Load (0.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mLocation Load (0.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mSetting Load (0.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mCACHE Location Load (0.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mCACHE Setting Load (0.0ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mLocation Load (0.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mSetting Load (0.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mLocation Load (0.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mSetting Load (0.1ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mCACHE Location Load (0.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mCACHE Setting Load (0.0ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mCACHE Location Load (0.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mCACHE Setting Load (0.0ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mCACHE Location Load (0.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mCACHE Setting Load (0.0ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mCACHE Location Load (0.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mCACHE Setting Load (0.0ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mCACHE Location Load (0.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mCACHE Setting Load (0.0ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mCACHE Location Load (0.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mCACHE Setting Load (0.0ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mCACHE Location Load (0.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mCACHE Setting Load (0.0ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mCACHE Location Load (0.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mCACHE Setting Load (0.0ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mCACHE Location Load (0.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mCACHE Setting Load (0.0ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mCACHE Location Load (0.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mCACHE Setting Load (0.0ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mCACHE Location Load (0.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mCACHE Setting Load (0.0ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mCACHE Location Load (0.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mCACHE Setting Load (0.0ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mCACHE Location Load (0.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+  [1m[36mCACHE Setting Load (0.0ms)[0m  [1m[34mSELECT "settings".* FROM "settings" WHERE "settings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/scenes_controller.rb:6:in `index'
+Completed 200 OK in 74ms (Views: 63.0ms | ActiveRecord: 7.8ms | Allocations: 66732)
+
+
+Started GET "/shoots" for ::1 at 2020-10-01 08:42:51 -0400
+Processing by ShootsController#index as HTML
+  [1m[36mShoot Load (0.4ms)[0m  [1m[34mSELECT "shoots".* FROM "shoots"[0m
+  ↳ app/controllers/shoots_controller.rb:6:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."shoot_id" = $1[0m  [["shoot_id", 10]]
+  ↳ app/controllers/shoots_controller.rb:6:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."shoot_id" = $1[0m  [["shoot_id", 11]]
+  ↳ app/controllers/shoots_controller.rb:6:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."shoot_id" = $1[0m  [["shoot_id", 12]]
+  ↳ app/controllers/shoots_controller.rb:6:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."shoot_id" = $1[0m  [["shoot_id", 13]]
+  ↳ app/controllers/shoots_controller.rb:6:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."shoot_id" = $1[0m  [["shoot_id", 14]]
+  ↳ app/controllers/shoots_controller.rb:6:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."shoot_id" = $1[0m  [["shoot_id", 15]]
+  ↳ app/controllers/shoots_controller.rb:6:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."shoot_id" = $1[0m  [["shoot_id", 16]]
+  ↳ app/controllers/shoots_controller.rb:6:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."shoot_id" = $1[0m  [["shoot_id", 17]]
+  ↳ app/controllers/shoots_controller.rb:6:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."shoot_id" = $1[0m  [["shoot_id", 18]]
+  ↳ app/controllers/shoots_controller.rb:6:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."shoot_id" = $1[0m  [["shoot_id", 19]]
+  ↳ app/controllers/shoots_controller.rb:6:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."shoot_id" = $1[0m  [["shoot_id", 20]]
+  ↳ app/controllers/shoots_controller.rb:6:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."shoot_id" = $1[0m  [["shoot_id", 21]]
+  ↳ app/controllers/shoots_controller.rb:6:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."shoot_id" = $1[0m  [["shoot_id", 22]]
+  ↳ app/controllers/shoots_controller.rb:6:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "scenes"."id" FROM "scenes" WHERE "scenes"."shoot_id" = $1[0m  [["shoot_id", 23]]
+  ↳ app/controllers/shoots_controller.rb:6:in `index'
+Completed 200 OK in 28ms (Views: 21.8ms | ActiveRecord: 4.4ms | Allocations: 22199)
+
+
+Started GET "/shoots" for ::1 at 2020-10-01 08:43:44 -0400
+Processing by ShootsController#index as HTML
+  [1m[36mShoot Load (0.3ms)[0m  [1m[34mSELECT "shoots".* FROM "shoots"[0m
+  ↳ app/controllers/shoots_controller.rb:6:in `index'
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 2.6ms | Allocations: 6949)
+
+
+  
+NoMethodError (undefined method `scene' for #<Shoot:0x00007f9a80ada328>
+Did you mean?  scenes
+               scenes=):
+  
+app/controllers/shoots_controller.rb:6:in `index'
+Started GET "/shoots" for ::1 at 2020-10-01 08:43:57 -0400
+Processing by ShootsController#index as HTML
+  [1m[36mShoot Load (0.2ms)[0m  [1m[34mSELECT "shoots".* FROM "shoots"[0m
+  ↳ app/controllers/shoots_controller.rb:6:in `index'
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 2.5ms | Allocations: 6877)
+
+
+  
+NoMethodError (undefined method `location' for #<Shoot:0x00007f9a7b3eeb40>):
+  
+app/controllers/shoots_controller.rb:6:in `index'

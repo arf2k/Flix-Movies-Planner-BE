@@ -3,14 +3,14 @@ class ScenesController < ApplicationController
 def index 
      scenes = Scene.all 
 
-     render json: scenes
+     render json: SceneSerializer.new(scenes)
 end
 
 def show 
      scene = Scene.find(params[:id])
 
 
-     render json: scene 
+     render json: SceneSerializer.new(scene)
 end
 
 
