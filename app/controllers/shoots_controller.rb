@@ -3,30 +3,31 @@ class ShootsController < ApplicationController
      def index  
           shoots = Shoot.all 
 
-          render json: shoots
+          render json: ShootSerializer.new(shoots)
      end
 
      def show 
           shoot = Shoot.find(params[:id])
 
-          render json: shoot 
+       
+          render json: ShootSerializer.new(shoot)
      end
 
  
      
      def create
-          #byebug
+        
           params.permit!
           shoot = Shoot.create({title: params[:title], date: params[:date]})
-          byebug
+       
           params[:scenes].each do |scene|
                scene[:shoot_id] = shoot.id
-               byebug
+              
                Scene.create(scene)
-               byebug
+             
           end
      
-          render json: shoot 
+          render json: ShootSerializer.new(shoot)
      end
 
 
