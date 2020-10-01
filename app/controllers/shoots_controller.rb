@@ -1,14 +1,32 @@
 class ShootsController < ApplicationController
-params.permit!
+
+     def index  
+          shoots = Shoot.all 
+
+          render json: shoots
+     end
+
+     def show 
+          shoot = Shoot.find(params[:id])
+
+          render json: shoot 
+     end
+
+ 
      
      def create
-          shoot = Shoot.create(params[:shoot][:title], params[:shoot][:date])
-          
-          params[:shoot][:scenes].each do |scene|
-               scene[:shoot_id] = shoot.id 
+          #byebug
+          params.permit!
+          shoot = Shoot.create({title: params[:title], date: params[:date]})
+          byebug
+          params[:scenes].each do |scene|
+               scene[:shoot_id] = shoot.id
+               byebug
                Scene.create(scene)
+               byebug
           end
      
+          render json: shoot 
      end
 
 

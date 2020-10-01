@@ -1,5 +1,18 @@
 class ScenesController < ApplicationController
      
+def index 
+     scenes = Scene.all 
+
+     render json: scenes
+end
+
+def show 
+     scene = Scene.find(params[:id])
+
+
+     render json: scene 
+end
+
 
 def create
 
@@ -17,7 +30,7 @@ def update
 
      scene.update!(scene_params)
      
-     render json: movie
+     render json: scene
 end
 
 def destroy
