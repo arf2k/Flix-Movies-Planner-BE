@@ -21,7 +21,7 @@ class ShootsController < ApplicationController
           shoot = Shoot.create({title: params[:title], date: params[:date]})
       
           params[:scenesObj][:scenes].each do |scene|
-               byebug
+              
                scene[:shoot_id] = shoot.id
               
                Scene.create(scene)
