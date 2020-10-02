@@ -19,8 +19,9 @@ class ShootsController < ApplicationController
         
           params.permit!
           shoot = Shoot.create({title: params[:title], date: params[:date]})
-       
-          params[:scenes].each do |scene|
+      
+          params[:scenesObj][:scenes].each do |scene|
+               byebug
                scene[:shoot_id] = shoot.id
               
                Scene.create(scene)
